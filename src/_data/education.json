@@ -1,0 +1,34 @@
+[
+  {
+    "degree": "PhD",
+    "field": "Environmental Science and Engineering Division",
+    "institution": "Colorado School of Mines",
+    "location": "",
+    "begin": 2009,
+    "end": 2013,
+    "notes": []
+  },
+  {
+    "degree": "M.S.",
+    "field": "Environmental Engineering",
+    "institution": "Colorado School of Mines",
+    "location": "",
+    "begin": 2007,
+    "end": 2009,
+    "notes": [
+      "Biotechnology and Environmental Microbiology emphasis"
+    ]
+  },
+  {
+    "degree": "B.S.",
+    "field": "Engineering, Environmental Science Specialty",
+    "institution": "Colorado School of Mines",
+    "location": "",
+    "begin": 2002,
+    "end": 2006,
+    "notes": [
+      "High Honors",
+      "Outstanding Graduating Senior Award, 2006"
+    ]
+  }
+]

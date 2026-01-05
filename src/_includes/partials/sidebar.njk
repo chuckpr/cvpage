@@ -1,0 +1,16 @@
+{% for item in items %}
+<div>
+  <h2 class="text-uppercase font-monospace fw-light ps-1 pb-2 mb-0 border-0" style="font-size: 20px;">{{ item.heading }}</h2>
+  <div class="d-flex flex-column ps-2">
+    {% for i in item.items %}
+      {% if i.url %}
+      <a href="{{ i.url }}" class="text-muted d-flex align-items-center" style="font-size: {% if i.name === 'chuck.peperanney [at] gmail.com' %}12px{% else %}18px{% endif %};">
+      {% if i.icon %}<iconify-icon icon="{{ i.icon }}" style="margin-right: 6px;"></iconify-icon>{% endif %}{{ i.name }}
+      </a>
+      {% else %}
+      <span class="text-muted" style="font-size: 18px;">{{ i.name }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}

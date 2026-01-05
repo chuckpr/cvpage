@@ -1,0 +1,24 @@
+{
+  "name": "cv-eleventy",
+  "version": "1.0.0",
+  "description": "Personal CV website built with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "keywords": [
+    "cv",
+    "resume",
+    "eleventy",
+    "static-site"
+  ],
+  "author": "Chuck Pepe-Ranney",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  }
+}

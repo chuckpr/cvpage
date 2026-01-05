@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "Curriculum Vitae"
+---
+
+<div class="sheet-outer letter">
+<div class="sheet">
+<div class="d-flex flex-row">
+<div class="d-flex flex-column justify-content-between ps-3 pe-2 pt-3 pb-3" style="height: 11in; width: 6.5in;">
+<div id="intro" class="mb-3 ps-3 border-start border-4 border-primary">
+<div class="d-flex flex-row justify-content-between">
+<h1 class="mt-0 mb-3">{{ profile.name }}</h1>
+<span class="text-muted fw-light font-monospace" style="font-size: 14px;">{{ profile.title }}</span>
+</div>
+<p class="mb-0" style="font-size: 16px;">{{ profile.description }}</p>
+</div>
+<div class="pb-0">
+  {% set items = experience | sortByDateDesc %}
+  {% set sectionTitle = "Experience" %}
+  {% set sectionIcon = "mdi:office-building" %}
+  {% include "partials/cv-item.njk" %}
+</div>
+<div class="pb-0">
+  {% set items = education | sortByDateDesc %}
+  {% set sectionTitle = "Education" %}
+  {% set sectionIcon = "mdi:school" %}
+  {% include "partials/cv-item.njk" %}
+</div>
+</div>
+<div class="d-flex flex-row align-items-stretch p-0 m-0" style="height: 11in; width: 2in; background: #ADD8E6;">
+<div class="d-flex flex-column justify-content-between mb-5 mt-5 pt-3 pb-3">
+  {% set items = sidebar %}
+  {% include "partials/sidebar.njk" %}
+</div>
+</div>
+</div>
+</div>
+</div>

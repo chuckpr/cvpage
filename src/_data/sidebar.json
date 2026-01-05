@@ -1,0 +1,77 @@
+[
+  {
+    "heading": "contact",
+    "items": [
+      {
+        "name": "575-313-0993"
+      },
+      {
+        "name": "chuck.peperanney [at] gmail.com",
+        "url": "mailto:chuck.peperanney@gmail.com"
+      }
+    ]
+  },
+  {
+    "heading": "links",
+    "items": [
+      {
+        "name": "chuckpr.github.io",
+        "url": "https://chuckpr.github.io",
+        "icon": "mdi:link"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/chuckpr",
+        "icon": "mdi:github"
+      },
+      {
+        "name": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=prJQG0oAAAAJ&hl=en",
+        "icon": "mdi:school"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://LinkedIn.com/in/chuckpr",
+        "icon": "mdi:linkedin"
+      }
+    ]
+  },
+  {
+    "heading": "skills",
+    "items": [
+      {
+        "name": "Statistical inference"
+      },
+      {
+        "name": "ML/modeling"
+      },
+      {
+        "name": "Cloud computing/AWS"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "R"
+      },
+      {
+        "name": "Bash"
+      },
+      {
+        "name": "HTML/CSS/JS"
+      },
+      {
+        "name": "NextFlow/Ploomber"
+      },
+      {
+        "name": "Quarto/Dash"
+      },
+      {
+        "name": "Linux"
+      },
+      {
+        "name": "Docker"
+      }
+    ]
+  }
+]
