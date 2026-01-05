@@ -2,6 +2,8 @@
 
 Personal CV website built with [Eleventy](https://www.11ty.dev/).
 
+**🔗 Live Site**: [https://chuckpr.github.io/cvpage](https://chuckpr.github.io/cvpage)
+
 ## Development
 
 ```bash
