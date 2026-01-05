@@ -29,6 +29,9 @@ module.exports = function(eleventyConfig) {
 
   // Return configuration
   return {
+    // Path prefix for GitHub Pages subdirectory
+    pathPrefix: "/cvpage/",
+
     dir: {
       input: "src",
       output: "_site",
