@@ -1,15 +1,15 @@
 [
   {
-    "title": "Assoc. Director Genomics Data Science/Discovery",
-    "organization": "LifeEdit",
+    "title": "Data Scientist/Assoc. Dir., technical lead, protein discovery",
+    "organization": "ElevateBio (formerly Life Edit)",
     "location": "Durham, North Carolina",
     "begin": 2021,
-    "end": "present",
+    "end": 2026,
     "notes": [
-      "From the drylab-side, I lead LifeEdit's supervised learning strategy for protein optimization.",
-      "I develop genomics workflows to process NGS data in support laboratory scientists.",
-      "I visualize and statistically model experimental output.",
-      "I am leading the development of LifeEdit's massive protein catalog for protein discovery."
+      "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",
+      "Developed genomics workflows to process NGS data in support of laboratory scientists.",
+      "Built the company ML benchmarking and active learning systems.",
+      "Led the development of ElevateBio's protein catalog for therapeutic discovery."
     ]
   },
   {
@@ -19,20 +19,21 @@
     "begin": 2016,
     "end": 2021,
     "notes": [
-      "Designed and led the development of AgBiome's AWS Genomics Data Platform",
-      "Developed cloud-based infrastructure and data scientist developer tooling to write and deploy data-driven monitoring and real-time analytics dashboards",
-      "Wrote (first author) AgBiome's first peer-reviewed scientific publication, awarded with the 'Editor's Pick' distinction by The Phytobiomes Journal"
+      "Designed and led the development of AgBiome's AWS Genomics Data Platform.",
+      "Developed cloud-based infrastructure and data scientist developer tooling to write and deploy data-driven monitoring and real-time analytics dashboards.",
+      "Wrote (first author) AgBiome's first peer-reviewed scientific publication, awarded with the 'Editor's Pick' distinction by The Phytobiomes Journal."
     ]
   },
   {
-    "title": "Adjunct Faculty Instructor",
-    "organization": "UNC, Chapel Hill—Gillings SPH and Sch. of Data sci. and Society",
-    "location": "",
+    "title": "Lead Faculty, Course Developer",
+    "organization": "UNC—Gillings SPH and Sch. of Data and Info. Sciences",
+    "location": "Chapel Hill, North Carolina",
     "begin": 2019,
     "end": "present",
     "notes": [
-      "I Teach Data Science Basics course (BIOS-512) in the Gillings School of Global Public Health.",
-      "I developed and teach the statistical inference and modeling course (DATA-730) for the School of Data Science and Society."
+      "Teach the Data Science Basics course (BIOS-512) in the Gillings School of Global Public Health.",
+      "Developed and teach the statistical inference and modeling course (DATA-730) for the School of Data and Information Sciences.",
+      "Teach a course on AI/ML and statistical methods for studying biology (DATA-791)."
     ]
   },
   {
@@ -42,19 +43,19 @@
     "begin": 2013,
     "end": 2016,
     "notes": [
-      "Designed and applied a microbiome analysis pipeline for DNA-SIP-based microbial ecology studies of agricultural soils and biological soil crusts",
-      "Published several manuscripts as first author in refereed journals and contributed as a co-author to many additional scientific publications"
+      "Designed and applied a microbiome analysis pipeline for DNA-SIP-based microbial ecology studies of agricultural soils and biological soil crusts.",
+      "Published several manuscripts as first author in refereed journals and contributed as a co-author to many additional scientific publications."
     ]
   },
   {
     "title": "Teaching Fellow Microbial Diversity Course, Four Summers",
-    "organization": "Marine Biology Laboratory, Woods Hole",
+    "organization": "Marine Biological Laboratory, Woods Hole",
     "location": "",
     "begin": 2010,
     "end": 2014,
     "notes": [
-      "Taught data analysis best practices in microbiome science focusing on the QIIME and Mothur toolkits and molecular biology laboratory techniques",
-      "Administered the course Linux servers"
+      "Taught data analysis best practices in microbiome science focusing on the QIIME and Mothur toolkits and molecular biology laboratory techniques.",
+      "Administered the course's Linux servers."
     ]
   },
   {
@@ -64,8 +65,8 @@
     "begin": 2005,
     "end": 2006,
     "notes": [
-      "Two summers studying thermophilic microoragnisms at INL",
-      "Awarded SULI undergraduate scholarship"
+      "Two summers studying thermophilic microorganisms at INL.",
+      "Awarded SULI undergraduate scholarship."
     ]
   }
 ]

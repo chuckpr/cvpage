@@ -2,16 +2,17 @@ module.exports = function(eleventyConfig) {
   // Copy assets to output directory
   eleventyConfig.addPassthroughCopy("src/assets");
 
-  // Custom filter to sort by begin date (descending) - replicates Quarto's "begin desc"
+  // Custom filter to sort by end date (descending), ongoing roles first;
+  // ties broken by begin date (descending)
   eleventyConfig.addFilter("sortByDateDesc", function(array) {
     if (!Array.isArray(array)) return array;
 
     return array.sort((a, b) => {
       const getYear = (date) => {
-        if (date === "present") return new Date().getFullYear();
+        if (date === "present") return Infinity;
         return parseInt(date) || 0;
       };
-      return getYear(b.begin) - getYear(a.begin);
+      return (getYear(b.end) - getYear(a.end)) || (getYear(b.begin) - getYear(a.begin));
     });
   });
 

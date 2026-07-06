@@ -49,19 +49,28 @@
         "name": "Cloud computing/AWS"
       },
       {
-        "name": "Python"
-      },
-      {
-        "name": "R"
-      },
-      {
-        "name": "Bash"
+        "name": "Python/R/Bash"
       },
       {
         "name": "HTML/CSS/JS"
       },
       {
-        "name": "NextFlow/Ploomber"
+        "name": "scikit-learn"
+      },
+      {
+        "name": "PyTorch"
+      },
+      {
+        "name": "Modal"
+      },
+      {
+        "name": "Marimo"
+      },
+      {
+        "name": "Claude Code/Pi"
+      },
+      {
+        "name": "NextFlow"
       },
       {
         "name": "Quarto/Dash"
