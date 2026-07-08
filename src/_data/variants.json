@@ -1,0 +1,20 @@
+[
+  {
+    "key": "default",
+    "label": "Data Science & ML",
+    "permalink": "/",
+    "skills": ["stats", "ml", "aws", "python", "web", "sklearn", "pytorch", "modal", "marimo", "claudecode", "nextflow", "quarto", "linux", "docker"]
+  },
+  {
+    "key": "platform",
+    "label": "Genomics Platform Engineering",
+    "permalink": "/platform/",
+    "profile": {
+      "title": "Genomics Platform Engineer<br>&amp; Data Scientist",
+      "titleSize": "14px",
+      "nameSize": "26px",
+      "description": "I build the cloud infrastructure and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
+    },
+    "skills": ["aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
+  }
+]

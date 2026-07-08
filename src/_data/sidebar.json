@@ -40,46 +40,88 @@
     "heading": "skills",
     "items": [
       {
+        "key": "stats",
         "name": "Statistical inference"
       },
       {
+        "key": "ml",
         "name": "ML/modeling"
       },
       {
+        "key": "aws",
         "name": "Cloud computing/AWS"
       },
       {
+        "key": "python",
         "name": "Python/R/Bash"
       },
       {
+        "key": "web",
         "name": "HTML/CSS/JS"
       },
       {
+        "key": "sklearn",
         "name": "scikit-learn"
       },
       {
+        "key": "pytorch",
         "name": "PyTorch"
       },
       {
+        "key": "modal",
         "name": "Modal"
       },
       {
+        "key": "marimo",
         "name": "Marimo"
       },
       {
+        "key": "claudecode",
         "name": "Claude Code/Pi"
       },
       {
+        "key": "nextflow",
         "name": "NextFlow"
       },
       {
+        "key": "quarto",
         "name": "Quarto/Dash"
       },
       {
+        "key": "linux",
         "name": "Linux"
       },
       {
+        "key": "docker",
         "name": "Docker"
+      },
+      {
+        "key": "awscdk",
+        "name": "AWS CDK"
+      },
+      {
+        "key": "terraform",
+        "name": "Terraform"
+      },
+      {
+        "key": "githubactions",
+        "name": "GitHub Actions"
+      },
+      {
+        "key": "awsbatch",
+        "name": "AWS Batch"
+      },
+      {
+        "key": "lambda",
+        "name": "AWS Lambda"
+      },
+      {
+        "key": "fargate",
+        "name": "AWS Fargate"
+      },
+      {
+        "key": "pythonlang",
+        "name": "Python"
       }
     ]
   }

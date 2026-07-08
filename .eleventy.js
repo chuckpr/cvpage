@@ -21,6 +21,25 @@ module.exports = function(eleventyConfig) {
     return `${begin}–${end}`;
   });
 
+  // Resolve a note's text for a variant (a plain string stays a string)
+  eleventyConfig.addFilter("noteText", function(note, variantKey) {
+    return (note && typeof note === "object")
+      ? ((note.variants && note.variants[variantKey]) || note.text)
+      : note;
+  });
+
+  // Reorder/filter the skills section for a variant; other sections pass through unchanged
+  eleventyConfig.addFilter("sidebarForVariant", function(sections, variant) {
+    return sections.map(function(section) {
+      if (section.heading !== "skills") return section;
+      const byKey = Object.fromEntries(section.items.map(i => [i.key, i]));
+      const order = (variant && variant.skills) || section.items.map(i => i.key);
+      return Object.assign({}, section, {
+        items: order.map(k => byKey[k]).filter(Boolean)
+      });
+    });
+  });
+
   // Development server options
   eleventyConfig.setServerOptions({
     liveReload: true,

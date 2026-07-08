@@ -13,7 +13,7 @@
     ]
   },
   {
-    "title": "Data Scientist and Data Science Group Leader",
+    "title": "Data Scientist/Engineer and Data Science Group Leader",
     "organization": "AgBiome",
     "location": "Durham, North Carolina",
     "begin": 2016,
@@ -31,9 +31,14 @@
     "begin": 2019,
     "end": "present",
     "notes": [
-      "Teach the Data Science Basics course (BIOS-512) in the Gillings School of Global Public Health.",
-      "Developed and teach the statistical inference and modeling course (DATA-730) for the School of Data and Information Sciences.",
-      "Teach a course on AI/ML and statistical methods for studying biology (DATA-791)."
+      {
+        "text": "Developed and teach three courses across the Gillings School of Public Health and the School of Data and Information Sciences:",
+        "children": [
+          "Data Science Basics (BIOS-512).",
+          "Statistical inference and modeling (DATA-730).",
+          "AI/ML and statistical methods for studying biology (DATA-791)."
+        ]
+      }
     ]
   },
   {
@@ -54,8 +59,7 @@
     "begin": 2010,
     "end": 2014,
     "notes": [
-      "Taught data analysis best practices in microbiome science focusing on the QIIME and Mothur toolkits and molecular biology laboratory techniques.",
-      "Administered the course's Linux servers."
+      "Taught data analysis best practices in microbiome science, molecular biology laboratory techniques and administered the course's Linux servers."
     ]
   },
   {
@@ -65,8 +69,7 @@
     "begin": 2005,
     "end": 2006,
     "notes": [
-      "Two summers studying thermophilic microorganisms at INL.",
-      "Awarded SULI undergraduate scholarship."
+      "Two summers studying thermophilic microorganisms at INL. Awarded SULI undergraduate scholarship."
     ]
   }
 ]
