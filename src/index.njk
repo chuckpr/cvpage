@@ -9,6 +9,9 @@ permalink: "{{ variant.permalink }}"
 ---
 
 <div class="sheet-outer letter">
+<div class="d-print-none text-center mb-2">
+  <a href="{{ ('/cv-' + variant.key + '.pdf') | url }}" class="btn btn-sm btn-primary">Download PDF</a>
+</div>
 <div class="sheet">
 <div class="d-flex flex-row">
 <div class="d-flex flex-column justify-content-between ps-3 pe-2 pt-3 pb-3" style="height: 11in; width: 6.5in;">

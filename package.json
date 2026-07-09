@@ -5,10 +5,12 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
+    "pdf": "npm run build && node scripts/generate-pdfs.js",
     "clean": "rm -rf _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "puppeteer": "^25.3.0"
   },
   "keywords": [
     "cv",
