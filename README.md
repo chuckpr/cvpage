@@ -48,7 +48,3 @@ The development server will be available at http://localhost:8080/
 - **Education**: Edit `src/_data/education.json`
 - **Contact/Links/Skills**: Edit `src/_data/sidebar.json`
 - **Styling**: Edit `src/assets/styles.css`
-
-## License
-
-MIT

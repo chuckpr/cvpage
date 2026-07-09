@@ -17,7 +17,7 @@
     "static-site"
   ],
   "author": "Chuck Pepe-Ranney",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "dependencies": {
     "js-yaml": "^4.1.1"
   }
