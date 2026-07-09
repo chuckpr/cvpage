@@ -15,6 +15,6 @@
       "nameSize": "26px",
       "description": "I build the cloud infrastructure and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
     },
-    "skills": ["aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
+    "skills": ["claudecode", "aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
   }
 ]
