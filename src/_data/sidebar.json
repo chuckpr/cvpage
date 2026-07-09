@@ -71,6 +71,7 @@
         "key": "modal",
         "name": "Modal"
       },
+      {"key": "jupyter", "name": "Jupyter"},
       {
         "key": "marimo",
         "name": "Marimo"
