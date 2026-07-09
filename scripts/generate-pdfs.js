@@ -17,6 +17,9 @@ const MIME = {
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".pdf": "application/pdf",
+  ".woff2": "font/woff2",
+  ".woff": "font/woff",
+  ".ttf": "font/ttf",
 };
 
 // Serve _site under the /cvpage/ base so absolute /cvpage/assets/... links resolve.
@@ -79,6 +82,8 @@ async function main() {
       } catch {
         console.warn(`  (icons did not all resolve for ${variant.key}; continuing)`);
       }
+      // Ensure the self-hosted web fonts are fully loaded before printing.
+      await page.evaluate(() => document.fonts.ready);
       await new Promise((r) => setTimeout(r, 300));
 
       await page.pdf({ path: outFile, printBackground: true, preferCSSPageSize: true });
