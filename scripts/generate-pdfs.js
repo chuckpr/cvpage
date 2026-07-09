@@ -53,7 +53,12 @@ async function main() {
   const { default: puppeteer } = await import("puppeteer");
   const server = await startServer();
   const port = server.address().port;
-  const browser = await puppeteer.launch({ headless: "new" });
+  // --no-sandbox: CI runners disable unprivileged user namespaces; safe here
+  // because we only ever render our own built site.
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
 
   try {
     for (const variant of VARIANTS) {
