@@ -3,6 +3,9 @@
     "key": "default",
     "label": "Data Science & ML",
     "permalink": "/",
+    "profile": {
+      "nameSize": "30px"
+    },
     "skills": ["stats", "ml", "aws", "python", "web", "sklearn", "pytorch", "modal", "marimo", "claudecode", "nextflow", "quarto", "linux", "docker"]
   },
   {
