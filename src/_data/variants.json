@@ -1,12 +1,15 @@
 [
   {
     "key": "default",
-    "label": "Data Science & ML",
+    "label": "ML & Data Science",
     "permalink": "/",
     "profile": {
-      "nameSize": "30px"
+      "title": "Machine Learning<br>&amp; Data Scientist",
+      "titleSize": "14px",
+      "nameSize": "26px",
+      "description": "ML and data scientist who builds and rigorously evaluates predictive models that drive R&D decisions in biotech, and teaches statistical modeling at UNC-Chapel Hill."
     },
-    "skills": ["stats", "ml", "aws", "python", "web", "sklearn", "pytorch", "modal", "marimo", "claudecode", "nextflow", "quarto", "linux", "docker"]
+    "skills": ["ml", "stats", "pytorch", "sklearn", "xgboost", "biolm", "llmagents", "claudecode", "python", "polarsduckdb", "jupyter", "modal", "aws", "docker", "linux"]
   },
   {
     "key": "platform",
@@ -16,7 +19,7 @@
       "title": "Genomics Platform Engineer<br>&amp; Data Scientist",
       "titleSize": "14px",
       "nameSize": "26px",
-      "description": "I build the cloud infrastructure and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
+      "description": "I build the event-driven cloud infrastructure, orchestration, and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
     },
     "skills": ["claudecode", "aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
   }

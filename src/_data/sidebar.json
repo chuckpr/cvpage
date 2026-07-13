@@ -123,6 +123,22 @@
       {
         "key": "pythonlang",
         "name": "Python"
+      },
+      {
+        "key": "xgboost",
+        "name": "XGBoost"
+      },
+      {
+        "key": "biolm",
+        "name": "Protein/DNA LMs"
+      },
+      {
+        "key": "llmagents",
+        "name": "LLM agents"
+      },
+      {
+        "key": "polarsduckdb",
+        "name": "Polars/DuckDB"
       }
     ]
   }

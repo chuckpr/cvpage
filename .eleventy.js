@@ -21,6 +21,23 @@ module.exports = function(eleventyConfig) {
     return `${begin}–${end}`;
   });
 
+  // Keep only the entries that apply to a variant. Works on experience/education
+  // items and on notes alike: an object may carry `only: [...]` or `except: [...]`,
+  // and a plain string (a bare note) always applies. Nested children are filtered too.
+  eleventyConfig.addFilter("forVariant", function(entries, variantKey) {
+    if (!Array.isArray(entries)) return entries;
+    const applies = (e) => {
+      if (!e || typeof e !== "object") return true;
+      if (e.hidden) return false;              // kept in the data, rendered nowhere
+      if (e.only) return e.only.includes(variantKey);
+      if (e.except) return !e.except.includes(variantKey);
+      return true;
+    };
+    return entries.filter(applies).map((e) =>
+      (e && e.children) ? Object.assign({}, e, { children: e.children.filter(applies) }) : e
+    );
+  });
+
   // Resolve a note's text for a variant (a plain string stays a string)
   eleventyConfig.addFilter("noteText", function(note, variantKey) {
     return (note && typeof note === "object")

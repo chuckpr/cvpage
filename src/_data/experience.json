@@ -6,10 +6,54 @@
     "begin": 2021,
     "end": 2026,
     "notes": [
-      "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",
-      "Developed genomics workflows to process NGS data in support of laboratory scientists.",
-      "Built the company ML benchmarking and active learning systems.",
-      "Led the development of ElevateBio's protein catalog for therapeutic discovery."
+      {
+        "text": "Led ElevateBio's supervised learning strategy for protein optimization:",
+        "only": ["default"],
+        "children": [
+          "Protein language model embeddings with supervised heads predicting fitness.",
+          "Regularized and gradient-boosted regressors over NGS/deep-mutational-scanning fitness readouts.",
+          "Active learning and Bayesian optimization to select each design–build–test round's variant library."
+        ]
+      },
+      {
+        "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position.",
+        "only": ["default"]
+      },
+      {
+        "text": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats Excel submissions, validating output against a Pydantic-style schema and feeding successes into a few-shot example bank.",
+        "only": ["default"]
+      },
+      {
+        "text": "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",
+        "only": ["platform"]
+      },
+      {
+        "text": "Built containerized NGS pipelines (Nextflow, AWS Batch) to process sequencing data at scale.",
+        "only": ["platform"]
+      },
+      {
+        "text": "Built ML training/eval infrastructure: GPU compute, containerized inference jobs, experiment tracking.",
+        "only": ["platform"]
+      },
+      {
+        "text": "Built the reporting stack: Dash dashboards on Fargate, nginx-proxied static HTML reports stored on S3.",
+        "only": ["platform"]
+      },
+      {
+        "text": "Developed the company ML benchmarking and active learning software."
+      },
+      {
+        "text": "Led the development of ElevateBio's protein catalog for therapeutic discovery.",
+        "variants": {
+          "platform": "Led development of ElevateBio's protein catalog: the database, search, and API layer behind therapeutic protein discovery."
+        },
+        "children": [
+          {
+            "text": "Provisioned its AWS infrastructure with CDK: networking, IAM, Batch, Fargate, and S3.",
+            "only": ["platform"]
+          }
+        ]
+      }
     ]
   },
   {
@@ -19,9 +63,15 @@
     "begin": 2016,
     "end": 2021,
     "notes": [
-      "Designed and led the development of AgBiome's AWS Genomics Data Platform.",
-      "Developed cloud-based infrastructure and data scientist developer tooling to write and deploy data-driven monitoring and real-time analytics dashboards.",
-      "Wrote (first author) AgBiome's first peer-reviewed scientific publication, awarded with the 'Editor's Pick' distinction by The Phytobiomes Journal."
+      {
+        "text": "First author on AgBiome's first peer-reviewed publication — an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly."
+      },
+      {
+        "text": "Designed and led AgBiome's AWS Genomics Data Platform: an event-driven system of genomics pipelines and developer tooling feeding a queryable database that informed R&D."
+      },
+      {
+        "text": "Developed cloud-based infrastructure and data scientist developer tooling to write and deploy data-driven monitoring and real-time analytics dashboards."
+      }
     ]
   },
   {
@@ -32,7 +82,7 @@
     "end": "present",
     "notes": [
       {
-        "text": "Developed and teach three courses across the Gillings School of Public Health and the School of Data and Information Sciences:",
+        "text": "Develop and teach three courses across the Gillings School of Public Health and the School of Data and Information Sciences:",
         "children": [
           "Data Science Basics (BIOS-512).",
           "Statistical inference and modeling (DATA-730).",
@@ -68,6 +118,7 @@
     "location": "",
     "begin": 2005,
     "end": 2006,
+    "hidden": true,
     "notes": [
       "Two summers studying thermophilic microorganisms at INL. Awarded SULI undergraduate scholarship."
     ]

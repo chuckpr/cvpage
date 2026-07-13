@@ -15,15 +15,15 @@ permalink: "{{ variant.permalink }}"
 <div class="sheet">
 <div class="d-flex flex-row">
 <div class="d-flex flex-column justify-content-between ps-3 pe-2 pt-3 pb-3" style="height: 11in; width: 6.5in;">
-<div id="intro" class="mb-0 ps-3 border-start border-4 border-primary">
+<div id="intro" class="mb-3 ps-3 border-start border-4 border-primary">
 <div class="d-flex flex-row justify-content-between">
-<h1 class="mt-0 {{ 'mb-1' if variant.key == 'platform' else 'mb-3' }} text-nowrap"{{ (' style="font-size: ' ~ variant.profile.nameSize ~ ';"' if variant.profile.nameSize else '') | safe }}>{{ profile.name }}</h1>
+<h1 class="mt-0 {{ 'mb-1' if variant.profile.title else 'mb-3' }} text-nowrap"{{ (' style="font-size: ' ~ variant.profile.nameSize ~ ';"' if variant.profile.nameSize else '') | safe }}>{{ profile.name }}</h1>
 <span class="text-muted fw-light font-monospace" style="font-size: {{ variant.profile.titleSize or '14px' }}; text-align: right;">{{ (variant.profile.title or profile.title) | safe }}</span>
 </div>
 <p class="mb-0" style="font-size: 16px;">{{ variant.profile.description or profile.description }}</p>
 </div>
 <div class="pb-0">
-  {% set items = experience | sortByDateDesc %}
+  {% set items = experience | forVariant(variant.key) | sortByDateDesc %}
   {% set sectionTitle = "Experience" %}
   {% set sectionIcon = "mdi:office-building" %}
   {% include "partials/cv-item.njk" %}
