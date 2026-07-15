@@ -10,7 +10,7 @@
         "text": "Led ElevateBio's supervised learning strategy for protein optimization:",
         "only": ["default"],
         "children": [
-          "Protein language model embeddings with supervised heads predicting fitness.",
+          "Protein language model embeddings as features with supervised heads predicting fitness.",
           "Regularized and gradient-boosted regressors over NGS/deep-mutational-scanning fitness readouts.",
           "Active learning and Bayesian optimization to select each design–build–test round's variant library."
         ]

@@ -6,8 +6,7 @@
     "profile": {
       "title": "Machine Learning<br>&amp; Data Scientist",
       "titleSize": "14px",
-      "nameSize": "26px",
-      "description": "ML and data scientist who builds and rigorously evaluates predictive models that drive R&D decisions in biotech, and teaches statistical modeling at UNC-Chapel Hill."
+      "nameSize": "26px"
     },
     "skills": ["ml", "stats", "pytorch", "sklearn", "xgboost", "biolm", "llmagents", "claudecode", "python", "polarsduckdb", "jupyter", "modal", "aws", "docker", "linux"]
   },
