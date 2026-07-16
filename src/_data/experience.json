@@ -11,7 +11,6 @@
         "only": ["default"],
         "children": [
           "Protein language model embeddings as features with supervised heads predicting fitness.",
-          "Regularized and gradient-boosted regressors over NGS/deep-mutational-scanning fitness readouts.",
           "Active learning and Bayesian optimization to select each design–build–test round's variant library."
         ]
       },
@@ -82,7 +81,7 @@
     "end": "present",
     "notes": [
       {
-        "text": "Develop and teach three courses across the Gillings School of Public Health and the School of Data and Information Sciences:",
+        "text": "Develop and teach three courses in Biostats and the School of Data and Information Sciences:",
         "children": [
           "Data Science Basics (BIOS-512).",
           "Statistical inference and modeling (DATA-730).",
@@ -94,7 +93,7 @@
   {
     "title": "Postdoctoral Researcher and Research Associate",
     "organization": "Cornell University",
-    "location": "Ithaca, NY",
+    "location": "Ithaca, New York",
     "begin": 2013,
     "end": 2016,
     "notes": [
