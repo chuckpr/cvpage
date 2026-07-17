@@ -8,7 +8,7 @@
       "titleSize": "14px",
       "nameSize": "26px"
     },
-    "skills": ["ml", "stats", "pytorch", "sklearn", "xgboost", "biolm", "llmagents", "claudecode", "python", "polarsduckdb", "jupyter", "modal", "aws", "docker", "linux"]
+    "skills": ["ml", "stats", "pytorch", "sklearn", "xgboost", "biolm", "llmagents", "claudecode", "python", "polarsduckdb", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
   },
   {
     "key": "platform",
