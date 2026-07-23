@@ -8,7 +8,7 @@
     "notes": [
       {
         "text": "Led ElevateBio's supervised learning strategy for protein optimization:",
-        "only": ["default", "educator"],
+        "only": ["default", "educator", "xcures"],
         "children": [
           "Protein language model embeddings as features with supervised heads predicting fitness.",
           "Active learning and Bayesian optimization to select each design–build–test round's variant library."
@@ -16,11 +16,11 @@
       },
       {
         "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position. Increased by >2X the available MGE training examples for downstream GenAI applications.",
-        "only": ["default", "educator"]
+        "only": ["default", "educator", "xcures"]
       },
       {
         "text": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats Excel submissions, validating output against a Pydantic-style schema and feeding successes into a few-shot example bank.",
-        "only": ["default", "educator"]
+        "only": ["default", "educator", "xcures"]
       },
       {
         "text": "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",

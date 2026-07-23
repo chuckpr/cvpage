@@ -33,5 +33,17 @@
       "description": "PhD data and applied scientist and university educator. I build and ship machine learning systems end to end, and I've spent a decade teaching data science and statistics, translating rigorous methods into skills people can use."
     },
     "skills": ["stats", "ml", "python", "sklearn", "pytorch", "xgboost", "jupyter", "marimo", "quarto", "claudecode", "llmagents", "polarsduckdb", "web", "docker", "aws", "linux"]
+  },
+  {
+    "key": "xcures",
+    "label": "xCures — AI Curation",
+    "permalink": "/xcures/",
+    "profile": {
+      "title": "Data Scientist<br>LLM Training &amp; Data Curation<br>&amp; ML Engineering",
+      "titleSize": "14px",
+      "nameSize": "26px",
+      "description": "PhD data scientist with experience curating training datasets for fine-tuning large language models. I thrive in high-energy, collaborative work environments, sweat the details, and am passionate about applying my skills to improve human health."
+    },
+    "skills": ["ml", "stats", "ngs", "cloud", "aixbio", "protein design", "pytorch", "sklearn", "xgboost", "biolm", "cdk", "terraform", "llmagents", "claudecode", "python", "polarsduckdb", "marimo", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
   }
 ]
