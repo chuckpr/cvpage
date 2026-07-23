@@ -15,7 +15,7 @@
         ]
       },
       {
-        "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position. Increased by >2X the availale MGE training examples for downstream GenAI applications.",
+        "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position. Increased by >2X the available MGE training examples for downstream GenAI applications.",
         "only": ["default", "educator"]
       },
       {
@@ -42,7 +42,7 @@
         "text": "Developed the company ML benchmarking and active learning software."
       },
       {
-        "text": "Led the development of ElevateBio's protein catalog for therapeutic discovery. Our discovery platfrom produced highly active gene editing effectors over a range of modalities that became key pillars of the company's technology portfolio.",
+        "text": "Led the development of ElevateBio's protein catalog for therapeutic discovery. Our discovery platform produced highly active gene editing effectors over a range of modalities that became key pillars of the company's technology portfolio.",
         "variants": {
           "platform": "Led development of ElevateBio's protein catalog: the database, search, and API layer behind therapeutic protein discovery."
         },
@@ -108,7 +108,7 @@
     "begin": 2010,
     "end": 2014,
     "notes": [
-      "Taught data analysis best practices in microbiome science, molecular biology laboratory techniques and administered the course's Linux servers."
+      "Taught data analysis best practices and molecular biology laboratory techniques in microbiome science, and administered the course's Linux servers."
     ]
   },
   {
