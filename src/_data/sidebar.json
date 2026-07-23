@@ -3,11 +3,13 @@
     "heading": "contact",
     "items": [
       {
-        "name": "575-313-0993"
+        "name": "575-313-0993",
+        "icon": "mdi:phone"
       },
       {
         "name": "chuck.peperanney [at] gmail.com",
-        "url": "mailto:chuck.peperanney@gmail.com"
+        "url": "mailto:chuck.peperanney@gmail.com",
+        "icon": "mdi:email-outline"
       }
     ]
   },
@@ -41,12 +43,17 @@
     "items": [
       {
         "key": "stats",
-        "name": "Statistical inference"
+        "name": "statistical inference"
       },
       {
         "key": "ml",
-        "name": "ML/modeling"
+        "name": "machine learning"
       },
+      {"key": "ngs", "name": "NGS analysis"},
+      {"key": "cloud", "name": "cloud computing"},
+      {"key": "protein design", "name": "protein design"},
+      {"key": "marimo", "name": "Marimo"},
+      {"key": "aixbio", "name": "AI x bio"},
       {
         "key": "aws",
         "name": "AWS"
@@ -61,7 +68,7 @@
       },
       {
         "key": "sklearn",
-        "name": "scikit-learn"
+        "name": "Scikit-Learn"
       },
       {
         "key": "pytorch",
@@ -100,10 +107,8 @@
         "key": "awscdk",
         "name": "AWS CDK"
       },
-      {
-        "key": "terraform",
-        "name": "Terraform"
-      },
+      {"key": "cdk", "name": "AWS CDK"},
+      {"key": "terraform", "name": "Terraform"},
       {
         "key": "githubactions",
         "name": "GitHub Actions"

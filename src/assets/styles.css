@@ -64,6 +64,38 @@ body {
 
 
 
+/* Contact row: pipe separators between items */
+.contact-item + .contact-item::before {
+  content: "|";
+  color: #ccc;
+  font-weight: 300;
+  margin-right: 4px;
+}
+
+
+
+/* Section heading centered inside a horizontal rule */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--bs-font-monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.section-rule::before,
+.section-rule::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #ddd;
+}
+
+
+
 /* Timeline */
 .timeline {
   position: relative;
@@ -89,13 +121,13 @@ body {
 
 .timeline-dot {
   position: absolute;
-  left: -24px;
+  left: -23px;
   top: 1px;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #212529;
-  margin-top: 3px;
+  margin-top: 4px;
   /* border: 2px solid white; */
   /* box-shadow: 0 0 0 2px #ccc; */
 }

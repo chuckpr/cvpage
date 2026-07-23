@@ -1,0 +1,17 @@
+<h2 class="section-rule mt-0 mb-2 border-0 pb-0"><span class="d-inline-flex align-items-center"><iconify-icon icon="{{ sectionIcon }}" style="margin-right: 6px;"></iconify-icon>{{ sectionTitle }}</span></h2>
+<div class="timeline">
+  {% for institution, degrees in items | groupby("institution") %}
+    <div class="timeline-item mb-1">
+      <div class="timeline-dot"></div>
+      <h3 class="mt-0 mb-0" style="font-size: 16px;">{{ institution }}</h3>
+      <div style="padding-left: 12px;">
+        {% for d in degrees %}
+        <div style="font-size: 13px; margin-top: 2px;">
+          <span style="font-weight: 800;">{{ d.degree }}, {{ d.field }}</span>
+          {%- if d.notes and d.notes.length %} <span class="text-muted">| {{ d.notes | join("; ") }}</span>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

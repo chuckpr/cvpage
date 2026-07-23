@@ -4,11 +4,11 @@
     "label": "ML & Data Science",
     "permalink": "/",
     "profile": {
-      "title": "Genomics Data Scientist<br>Data Engineering<br>&amp; Machine Learning",
+      "title": "Data Scientist<br>Data Engineer<br>&amp; Machine Learning Scientist",
       "titleSize": "14px",
       "nameSize": "26px"
     },
-    "skills": ["ml", "stats", "pytorch", "sklearn", "xgboost", "biolm", "llmagents", "claudecode", "python", "polarsduckdb", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
+    "skills": ["ml", "stats", "ngs", "cloud", "aixbio", "protein design", "pytorch", "sklearn", "xgboost", "biolm", "cdk", "terraform", "llmagents", "claudecode", "python", "polarsduckdb", "marimo", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
   },
   {
     "key": "platform",
@@ -21,5 +21,17 @@
       "description": "I build the event-driven cloud infrastructure, orchestration, and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
     },
     "skills": ["claudecode", "aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
+  },
+  {
+    "key": "educator",
+    "label": "Data Science Educator",
+    "permalink": "/educator/",
+    "profile": {
+      "title": "Data &amp; Applied Scientist<br>&amp; Data Science Educator",
+      "titleSize": "14px",
+      "nameSize": "26px",
+      "description": "PhD data and applied scientist and university educator. I build and ship machine learning systems end to end, and I've spent a decade teaching data science and statistics, translating rigorous methods into skills people can use."
+    },
+    "skills": ["stats", "ml", "python", "sklearn", "pytorch", "xgboost", "jupyter", "marimo", "quarto", "claudecode", "llmagents", "polarsduckdb", "web", "docker", "aws", "linux"]
   }
 ]

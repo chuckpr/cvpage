@@ -1,0 +1,11 @@
+<div class="d-flex flex-row flex-wrap align-items-center mt-2 text-muted" style="font-size: 13.5px; gap: 6px 4px;">
+{%- for section in sections %}{% if section.heading == "contact" or section.heading == "links" %}
+  {%- for i in section.items %}
+    {%- if i.url %}
+    <a href="{{ i.url }}" class="contact-item text-muted d-flex align-items-center text-decoration-none">{% if i.icon %}<iconify-icon icon="{{ i.icon }}" style="margin-right: 4px;"></iconify-icon>{% endif %}{{ i.name }}</a>
+    {%- else %}
+    <span class="contact-item d-flex align-items-center">{% if i.icon %}<iconify-icon icon="{{ i.icon }}" style="margin-right: 4px;"></iconify-icon>{% endif %}{{ i.name }}</span>
+    {%- endif %}
+  {%- endfor %}
+{%- endif %}{% endfor %}
+</div>

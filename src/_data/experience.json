@@ -1,6 +1,6 @@
 [
   {
-    "title": "Data Scientist/Assoc. Dir., technical lead, protein discovery",
+    "title": "Data Scientist, Associate Diretror, technical lead for protein discovery",
     "organization": "ElevateBio (formerly Life Edit)",
     "location": "Durham, North Carolina",
     "begin": 2021,
@@ -8,7 +8,7 @@
     "notes": [
       {
         "text": "Led ElevateBio's supervised learning strategy for protein optimization:",
-        "only": ["default"],
+        "only": ["default", "educator"],
         "children": [
           "Protein language model embeddings as features with supervised heads predicting fitness.",
           "Active learning and Bayesian optimization to select each design–build–test round's variant library."
@@ -16,11 +16,11 @@
       },
       {
         "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position.",
-        "only": ["default"]
+        "only": ["default", "educator"]
       },
       {
         "text": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats Excel submissions, validating output against a Pydantic-style schema and feeding successes into a few-shot example bank.",
-        "only": ["default"]
+        "only": ["default", "educator"]
       },
       {
         "text": "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",
@@ -63,7 +63,7 @@
     "end": 2021,
     "notes": [
       {
-        "text": "First author on AgBiome's first peer-reviewed publication — an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly."
+        "text": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly."
       },
       {
         "text": "Designed and led AgBiome's AWS Genomics Data Platform: an event-driven system of genomics pipelines and developer tooling feeding a queryable database that informed R&D."
@@ -74,8 +74,8 @@
     ]
   },
   {
-    "title": "Lead Faculty, Course Developer",
-    "organization": "UNC—Gillings SPH and Sch. of Data and Info. Sciences",
+    "title": "Lead Faculty and Course Developer for Data Science",
+    "organization": "UNC Gillings SPH and UNC School of Data and Information Sciences",
     "location": "Chapel Hill, North Carolina",
     "begin": 2019,
     "end": "present",
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "title": "Teaching Fellow Microbial Diversity Course, Four Summers",
+    "title": "Teaching Fellow Microbial Diversity Course",
     "organization": "Marine Biological Laboratory, Woods Hole",
     "location": "",
     "begin": 2010,
