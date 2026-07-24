@@ -38,6 +38,13 @@ module.exports = function(eleventyConfig) {
     );
   });
 
+  // Partition experience entries by section. Items without a `section` key
+  // default to "experience", so only Teaching entries need to opt in.
+  eleventyConfig.addFilter("section", function(items, name) {
+    if (!Array.isArray(items)) return items;
+    return items.filter((i) => (i && i.section ? i.section : "experience") === name);
+  });
+
   // Resolve a note's text for a variant (a plain string stays a string)
   eleventyConfig.addFilter("noteText", function(note, variantKey) {
     return (note && typeof note === "object")

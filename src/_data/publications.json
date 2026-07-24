@@ -1,0 +1,31 @@
+[
+  {
+    "authors": "<strong>Pepe-Ranney C</strong>, Keyser C, Trimble JK, Bissinger B",
+    "title": "Surveying the sweetpotato rhizosphere, endophyte, and surrounding soil microbiomes at two North Carolina farms reveals underpinnings of sweetpotato microbiome community assembly",
+    "venue": "Phytobiomes Journal",
+    "year": 2020,
+    "note": "Editor's Pick",
+    "only": ["compbio", "tech"]
+  },
+  {
+    "authors": "<strong>Pepe-Ranney C</strong>, Campbell AN, Koechli CN, Berthrong S, Buckley DH",
+    "title": "Unearthing the ecology of soil microorganisms using a high-resolution DNA-SIP approach to explore cellulose and xylose metabolism in soil",
+    "venue": "Frontiers in Microbiology",
+    "year": 2016,
+    "only": ["compbio", "tech"]
+  },
+  {
+    "authors": "<strong>Pepe-Ranney C</strong>, Koechli C, Potrafka R, et al.",
+    "title": "Non-cyanobacterial diazotrophs mediate dinitrogen fixation in biological soil crusts during early crust formation",
+    "venue": "ISME Journal",
+    "year": 2015,
+    "only": ["compbio"]
+  },
+  {
+    "authors": "<strong>Pepe-Ranney C</strong>, Berelson WM, Corsetti FA, Treants M, Spear JR",
+    "title": "Cyanobacterial construction of hot-spring siliceous stromatolites in Yellowstone National Park",
+    "venue": "Environmental Microbiology",
+    "year": 2012,
+    "only": ["compbio"]
+  }
+]

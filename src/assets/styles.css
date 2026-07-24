@@ -40,15 +40,19 @@ body {
 
 .sheet {
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   box-sizing: border-box;
-  page-break-after: always;
 }
 
-.sheet-outer.letter .sheet { 
-  width: 8.5in; 
-  height: 11in; 
+.sheet-outer.letter .sheet {
+  width: 8.5in;
+}
+
+/* Content flows naturally; page insets come from @page margins in print and
+   from padding on screen, so the résumé can run onto a second page. */
+.resume-body {
+  padding: 0.35in;
 }
 
 .sheet.padding-5mm {
@@ -69,7 +73,7 @@ body {
   content: "|";
   color: #ccc;
   font-weight: 300;
-  margin-right: 4px;
+  margin-right: 3px;
 }
 
 
@@ -134,33 +138,120 @@ body {
 
 
 
+/* A bit more separation between the major résumé sections */
+.section-block {
+  margin-top: 12px;
+}
+
+/* Bullet/body text; size is themeable per variant so a shorter résumé can
+   use larger, more legible text and fill the page. */
+.note-body {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* Compact one-page mode: larger body text with natural spacing, tuned so a
+   near-full résumé fills a single page rather than squeezing the lines. */
+.resume-body.compact .note-body {
+  font-size: 11.5px;
+  line-height: 1.3;
+}
+
+.resume-body.compact .skill-clusters {
+  font-size: 11.5px;
+  line-height: 1.3;
+  gap: 2px;
+}
+
+.resume-body.compact .section-block {
+  margin-top: 6px;
+}
+
+.resume-body.compact h2.section-rule {
+  margin-bottom: 4px !important;
+}
+
+.resume-body.compact .timeline-item {
+  margin-bottom: 0 !important;
+}
+
+/* Skills as labeled clusters (single-column, ATS-parseable plain text) */
+.skill-clusters {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.skill-cluster {
+  display: grid;
+  grid-template-columns: 9.5em 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.skill-cluster-label {
+  font-family: var(--bs-font-monospace);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.skill-cluster-items {
+  color: #212529;
+}
+
 /* Media queries */
 @media screen {
-  body { 
-      background: #e0e0e0 
+  body {
+      background: #e0e0e0
   }
-  
+
   .sheet {
       background: white;
-      box-shadow: 0 .5mm 2mm rgba(0,0,0,.3); 
+      box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
       margin: 5mm auto;
+      min-height: 11in;
   }
 }
 
 @page {
   size: letter portrait;
-  margin: 0
+  margin: 0.35in;
 }
 
 @media print {
-  .sheet-outer.letter { 
+  .sheet-outer.letter {
     margin: 0;
-    width: 8.5in; 
+    width: auto;
   }
 
   .sheet {
     background: white;
+    width: auto;
+    min-height: 0;
+    box-shadow: none;
     margin: 0;
+    overflow: visible;
+  }
+
+  /* No screen padding in print; @page margins provide the page inset. */
+  .resume-body {
+    padding: 0;
+  }
+
+  /* Keep entries and headings from splitting awkwardly across page breaks. */
+  .timeline-item,
+  .pub-item {
+    break-inside: avoid;
+  }
+
+  h2.section-rule {
+    break-after: avoid;
   }
 
   /* Hide */

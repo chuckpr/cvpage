@@ -1,49 +1,63 @@
 [
   {
-    "key": "default",
-    "label": "ML & Data Science",
+    "key": "compbio",
+    "label": "Computational Biology / Biotech",
     "permalink": "/",
     "profile": {
-      "title": "Data Scientist<br>Data Engineer<br>&amp; Machine Learning Scientist",
-      "titleSize": "14px",
-      "nameSize": "26px"
-    },
-    "skills": ["ml", "stats", "ngs", "cloud", "aixbio", "protein design", "pytorch", "sklearn", "xgboost", "biolm", "cdk", "terraform", "llmagents", "claudecode", "python", "polarsduckdb", "marimo", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
-  },
-  {
-    "key": "platform",
-    "label": "Genomics Platform Engineering",
-    "permalink": "/platform/",
-    "profile": {
-      "title": "Genomics Platform Engineer<br>&amp; Data Scientist",
+      "title": "Genomics data scientist",
       "titleSize": "14px",
       "nameSize": "26px",
-      "description": "I build the event-driven cloud infrastructure, orchestration, and containerized genomics pipelines that turn NGS and experimental data into production platforms, and I teach data science and statistical modeling at UNC-Chapel Hill."
+      "description": "Full-stack genomics data scientist who builds data systems end to end: data pipelines, front-end data products, machine learning, and statistical analysis."
     },
-    "skills": ["claudecode", "aws", "awscdk", "terraform", "awsbatch", "lambda", "fargate", "docker", "nextflow", "githubactions", "linux", "pythonlang", "ml", "stats"]
+    "publications": true,
+    "skillClusters": [
+      {
+        "label": "ML & Modeling",
+        "items": ["machine learning", "protein & DNA language models", "active learning", "Bayesian optimization", "XGBoost", "PyTorch", "scikit-learn", "statistical inference"]
+      },
+      {
+        "label": "Domain",
+        "items": ["protein design", "AI × bio", "NGS / genomic sequence analysis", "metagenomics"]
+      },
+      {
+        "label": "Infrastructure & Cloud",
+        "items": ["AWS (CDK, Batch, Lambda, Fargate, S3)", "Nextflow", "Docker", "Modal", "Terraform", "GitHub Actions", "Linux"]
+      },
+      {
+        "label": "Languages & Tools",
+        "items": ["Python", "R", "SQL", "Bash", "Polars / DuckDB", "Jupyter", "Marimo", "LLM agents (Anthropic SDK)", "Claude Code & Pi"]
+      }
+    ]
   },
   {
-    "key": "educator",
-    "label": "Data Science Educator",
-    "permalink": "/educator/",
+    "key": "tech",
+    "label": "Tech / Healthcare Data Science",
+    "permalink": "/tech/",
+    "compact": true,
     "profile": {
-      "title": "Data &amp; Applied Scientist<br>&amp; Data Science Educator",
+      "title": "Data Scientist<br>&amp; Machine Learning Engineer",
       "titleSize": "14px",
       "nameSize": "26px",
-      "description": "PhD data and applied scientist and university educator. I build and ship machine learning systems end to end, and I've spent a decade teaching data science and statistics, translating rigorous methods into skills people can use."
+      "description": "Data scientist and machine learning engineer who builds data systems end to end: pipelines, LLM and agentic systems, predictive models, and the statistical analysis behind them. Teaches statistical inference and data science at UNC-Chapel Hill."
     },
-    "skills": ["stats", "ml", "python", "sklearn", "pytorch", "xgboost", "jupyter", "marimo", "quarto", "claudecode", "llmagents", "polarsduckdb", "web", "docker", "aws", "linux"]
-  },
-  {
-    "key": "xcures",
-    "label": "xCures — AI Curation",
-    "permalink": "/xcures/",
-    "profile": {
-      "title": "Data Scientist<br>LLM Training &amp; Data Curation<br>&amp; ML Engineering",
-      "titleSize": "14px",
-      "nameSize": "26px",
-      "description": "PhD data scientist with experience curating training datasets for fine-tuning large language models. I thrive in high-energy, collaborative work environments, sweat the details, and am passionate about applying my skills to improve human health."
-    },
-    "skills": ["ml", "stats", "ngs", "cloud", "aixbio", "protein design", "pytorch", "sklearn", "xgboost", "biolm", "cdk", "terraform", "llmagents", "claudecode", "python", "polarsduckdb", "marimo", "jupyter", "modal", "nextflow", "aws", "docker", "linux"]
+    "publications": false,
+    "skillClusters": [
+      {
+        "label": "ML & Modeling",
+        "items": ["machine learning", "LLM & agentic systems", "PyTorch", "scikit-learn", "XGBoost", "Bayesian optimization", "statistical inference"]
+      },
+      {
+        "label": "Data Engineering & Cloud",
+        "items": ["AWS (CDK, Batch, Lambda, Fargate, S3)", "event-driven pipelines", "Docker", "Terraform", "GitHub Actions", "Modal", "Linux"]
+      },
+      {
+        "label": "Data Products & Analytics",
+        "items": ["SQL", "Polars / DuckDB", "data warehousing (Athena)", "dashboards (Dash)", "Quarto"]
+      },
+      {
+        "label": "Languages & Tools",
+        "items": ["Python", "R", "Bash", "Jupyter", "Marimo", "LLM agents (Anthropic SDK)", "Claude Code & Pi"]
+      }
+    ]
   }
 ]

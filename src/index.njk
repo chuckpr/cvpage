@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: "Curriculum Vitae"
+title: "Résumé"
 pagination:
   data: variants
   size: 1
@@ -10,29 +10,45 @@ permalink: "{{ variant.permalink }}"
 
 <div class="sheet-outer letter">
 <div class="d-print-none text-center mb-2">
-  <a href="{{ ('/cv-' + variant.key + '.pdf') | url }}" class="btn btn-sm btn-primary">Download PDF</a>
+  <a href="{{ ('/resume-' + variant.key + '.pdf') | url }}" class="btn btn-sm btn-primary">Download PDF</a>
 </div>
 <div class="sheet">
 {% set sections = sidebar | sidebarForVariant(variant) %}
-<div class="d-flex flex-column justify-content-between p-3" style="height: 11in;">
-<div>
+<div class="resume-body{{ ' compact' if variant.compact }}">
 <div id="intro" class="mb-2 ps-3 border-start border-4 border-dark">
-<div class="d-flex flex-row justify-content-between">
-<h1 class="mt-0 {{ 'mb-1' if variant.profile.title else 'mb-3' }} text-nowrap"{{ (' style="font-size: ' ~ variant.profile.nameSize ~ ';"' if variant.profile.nameSize else '') | safe }}>{{ profile.name }}</h1>
+<div class="d-flex flex-row justify-content-between align-items-start">
+<h1 class="mt-0 {{ 'mb-1' if variant.profile.title else 'mb-1' }} text-nowrap"{{ (' style="font-size: ' ~ variant.profile.nameSize ~ ';"' if variant.profile.nameSize else '') | safe }}>{{ profile.name }}</h1>
 <span class="text-muted fw-light font-monospace" style="font-size: {{ variant.profile.titleSize or '14px' }}; text-align: right;">{{ (variant.profile.title or profile.title) | safe }}</span>
 </div>
-<p class="mb-0" style="font-size: 16px;">{{ variant.profile.description or profile.description }}</p>
+{% if profile.location %}<div class="text-muted" style="font-size: 12.5px; margin-bottom: 4px;">{{ profile.location }}</div>{% endif %}
+<p class="mb-0" style="font-size: 15px;">{{ variant.profile.description or profile.description }}</p>
 </div>
 {% include "partials/contact-row.njk" %}
-</div>
 {% include "partials/skills-row.njk" %}
-<div class="pb-0">
-  {% set items = experience | forVariant(variant.key) | sortByDateDesc %}
+<div class="pb-0 section-block">
+  {% set items = experience | forVariant(variant.key) | section("experience") | sortByDateDesc %}
   {% set sectionTitle = "Experience" %}
   {% set sectionIcon = "mdi:office-building" %}
   {% include "partials/cv-item.njk" %}
 </div>
-<div class="pb-0">
+{% set teaching = experience | forVariant(variant.key) | section("teaching") | sortByDateDesc %}
+{% if teaching and teaching.length %}
+<div class="pb-0 section-block">
+  {% set items = teaching %}
+  {% set sectionTitle = "Teaching" %}
+  {% set sectionIcon = "mdi:human-male-board" %}
+  {% include "partials/cv-item.njk" %}
+</div>
+{% endif %}
+{% if variant.publications %}
+  {% set pubs = publications | forVariant(variant.key) %}
+  {% if pubs and pubs.length %}
+  <div class="pb-0 section-block">
+    {% include "partials/publications.njk" %}
+  </div>
+  {% endif %}
+{% endif %}
+<div class="pb-0 section-block">
   {% set items = education | sortByDateDesc %}
   {% set sectionTitle = "Education" %}
   {% set sectionIcon = "mdi:school" %}

@@ -66,7 +66,7 @@ async function main() {
   try {
     for (const variant of VARIANTS) {
       const url = `http://127.0.0.1:${port}${PATH_PREFIX}${variant.permalink}`;
-      const outFile = path.join(SITE_DIR, `cv-${variant.key}.pdf`);
+      const outFile = path.join(SITE_DIR, `resume-${variant.key}.pdf`);
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: "networkidle0" });
 

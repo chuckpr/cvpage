@@ -1,75 +1,91 @@
 [
   {
-    "title": "Data Scientist, Associate Director, technical lead for protein discovery",
+    "title": "Senior Data Scientist → Associate Director, Technical Lead for Protein Discovery",
     "organization": "ElevateBio (formerly Life Edit)",
     "location": "Durham, North Carolina",
     "begin": 2021,
     "end": 2026,
     "notes": [
       {
-        "text": "Led ElevateBio's supervised learning strategy for protein optimization:",
-        "only": ["default", "educator", "xcures"],
-        "children": [
-          "Protein language model embeddings as features with supervised heads predicting fitness.",
-          "Active learning and Bayesian optimization to select each design–build–test round's variant library."
-        ]
+        "text": "Led the supervised-learning strategy for protein optimization: protein language model embeddings with supervised fitness heads, plus active learning and Bayesian optimization to select each design-build-test round's variant library. Nominated hundreds of candidate variants per round and drove multi-objective optimization, surfacing variants with up to a 1.5X increase in activity.",
+        "only": ["compbio"]
       },
       {
-        "text": "Developed the training dataset for and built a high-performing XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position. Increased by >2X the available MGE training examples for downstream GenAI applications.",
-        "only": ["default", "educator", "xcures"]
+        "text": "Built the training dataset for and trained an XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position at single-nucleotide resolution with >90% accuracy, more than doubling (>2X) the MGE training examples available for downstream generative applications.",
+        "only": ["compbio"]
       },
       {
-        "text": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats Excel submissions, validating output against a Pydantic-style schema and feeding successes into a few-shot example bank.",
-        "only": ["default", "educator", "xcures"]
+        "text": "Led development of ElevateBio's protein catalog for therapeutic discovery, delivering active gene-editing effectors across three editing modalities and contributing 300k+ distinct training examples for generative-model fine-tuning; these became key pillars of the company's technology portfolio.",
+        "only": ["compbio"]
       },
       {
-        "text": "Led ElevateBio's supervised learning strategy for protein optimization from the dry-lab side.",
-        "only": ["platform"]
+        "text": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats experimental data submissions across three partnered program campaigns, validating output against a schema and feeding successes into a few-shot example bank.",
+        "only": ["compbio"]
       },
       {
-        "text": "Built containerized NGS pipelines (Nextflow, AWS Batch) to process sequencing data at scale.",
-        "only": ["platform"]
+        "text": "Developed the company's ML benchmarking and active-learning software.",
+        "only": ["compbio"]
       },
       {
-        "text": "Built ML training/eval infrastructure: GPU compute, containerized inference jobs, experiment tracking.",
-        "only": ["platform"]
+        "text": "Designed and built a self-improving agentic system on the Anthropic SDK that converts unstructured submissions into schema-validated structured records, with an automated few-shot retrieval loop that learns from its own successful outputs; deployed across three concurrent program pipelines.",
+        "only": ["tech"]
       },
       {
-        "text": "Built the reporting stack: Dash dashboards on Fargate, nginx-proxied static HTML reports stored on S3.",
-        "only": ["platform"]
+        "text": "Led an active-learning and Bayesian-optimization program that optimizes candidate designs under a fixed experimental budget: embeddings from large pretrained sequence models feed supervised performance predictors, and adaptive selection targets the highest-value candidates each round. Delivered up to a 1.5X performance gain.",
+        "only": ["tech"]
       },
       {
-        "text": "Developed the company ML benchmarking and active learning software."
+        "text": "Built the training data for and trained a gradient-boosted (XGBoost) classifier on embeddings from a large foundation model, reaching >90% accuracy at single-record resolution and more than doubling the usable training set for downstream generative models.",
+        "only": ["tech"]
       },
       {
-        "text": "Led the development of ElevateBio's protein catalog for therapeutic discovery. Our discovery platform produced highly active gene editing effectors over a range of modalities that became key pillars of the company's technology portfolio.",
-        "variants": {
-          "platform": "Led development of ElevateBio's protein catalog: the database, search, and API layer behind therapeutic protein discovery."
-        },
-        "children": [
-          {
-            "text": "Provisioned its AWS infrastructure with CDK: networking, IAM, Batch, Fargate, and S3.",
-            "only": ["platform"]
-          }
-        ]
+        "text": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs.",
+        "only": ["tech"]
       }
     ]
   },
   {
-    "title": "Data Scientist/Engineer and Data Science Group Leader",
+    "title": "Data Scientist → Data Science Group Leader",
     "organization": "AgBiome",
     "location": "Durham, North Carolina",
     "begin": 2016,
     "end": 2021,
     "notes": [
       {
-        "text": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly."
+        "text": "Designed and led AgBiome's AWS genomics data platform: an event-driven system of dozens of pipelines (from k-mer sketching to biosynthetic gene cluster annotation) processing 20,000+ isolated and sequenced microorganisms annually into a queryable database that informed R&D.",
+        "only": ["compbio"]
       },
       {
-        "text": "Designed and led AgBiome's AWS Genomics Data Platform: an event-driven system of genomics pipelines and developer tooling feeding a queryable database that informed R&D."
+        "text": "Developed AgBiome's internal genome comparison API: a REST service on AWS Lambda and API Gateway for rapid MinHash-based genome search, pairwise comparison, and clustering by similarity.",
+        "only": ["compbio"]
       },
       {
-        "text": "Developed cloud-based infrastructure and data scientist developer tooling to write and deploy data-driven monitoring and real-time analytics dashboards."
+        "text": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly.",
+        "only": ["compbio"]
+      },
+      {
+        "text": "Developed cloud infrastructure and developer tooling for real-time analytics and monitoring dashboards.",
+        "only": ["compbio"]
+      },
+      {
+        "text": "Designed and led an event-driven data platform: ingestion pipelines, developer tooling, and a queryable warehouse serving R&D, running dozens of pipelines over 20,000+ new datasets per year.",
+        "only": ["tech"]
+      },
+      {
+        "text": "Built an internal similarity-search REST API (AWS Lambda and API Gateway) using MinHash sketching for fast approximate matching, pairwise comparison, and similarity clustering over large record sets.",
+        "only": ["tech"]
+      },
+      {
+        "text": "Published first-author, peer-reviewed statistical analysis (multivariate and compositional methods) of large observational survey data; an Editor's Pick in its journal.",
+        "only": ["tech"]
+      },
+      {
+        "text": "Built cloud infrastructure and developer tooling for real-time analytics and monitoring dashboards.",
+        "only": ["tech"]
+      },
+      {
+        "text": "Founded, built, and deployed an internal data science blog (static site on AWS S3) and contributed regularly, communicating data narratives and results across the company.",
+        "only": ["compbio", "tech"]
       }
     ]
   },
@@ -77,15 +93,25 @@
     "title": "Lead Faculty and Course Developer for Data Science",
     "organization": "UNC Gillings SPH and UNC School of Data and Information Sciences",
     "location": "Chapel Hill, North Carolina",
+    "section": "teaching",
     "begin": 2019,
     "end": "present",
     "notes": [
       {
-        "text": "Develop and teach three courses in Biostats and the School of Data and Information Sciences:",
+        "text": "Develop and teach three courses in Biostatistics and the School of Data and Information Sciences:",
+        "variants": {
+          "compbio": "Develop and teach three courses; taught 500+ students, growing Data Science Basics (BIOS-512) from 11 students to 50+ with a full waitlist:",
+          "tech": "Develop and teach statistical inference (DATA-730), data science, and applied machine learning at a top-ranked school of public health; taught 500+ students, growing the introductory course from 11 students to 50+ with a full waitlist:"
+        },
         "children": [
           "Data Science Basics (BIOS-512).",
           "Statistical inference and modeling (DATA-730).",
-          "AI/ML and statistical methods for studying biology (DATA-791)."
+          {
+            "text": "AI/ML and statistical methods for studying biology (DATA-791).",
+            "variants": {
+              "tech": "AI/ML and statistical methods (DATA-791)."
+            }
+          }
         ]
       }
     ]
@@ -97,18 +123,32 @@
     "begin": 2013,
     "end": 2016,
     "notes": [
-      "Designed and applied a microbiome analysis pipeline for DNA-SIP-based microbial ecology studies of agricultural soils and biological soil crusts.",
-      "Published several manuscripts as first author in refereed journals and contributed as a co-author to many additional scientific publications."
+      {
+        "text": "Designed and applied a microbiome analysis pipeline for DNA-SIP-based microbial ecology studies of agricultural soils and biological soil crusts.",
+        "only": ["compbio"]
+      },
+      {
+        "text": "Postdoctoral researcher: built reproducible data-analysis pipelines and published multiple first-author, peer-reviewed studies.",
+        "only": ["tech"]
+      }
     ]
   },
   {
     "title": "Teaching Fellow Microbial Diversity Course",
     "organization": "Marine Biological Laboratory, Woods Hole",
     "location": "",
+    "section": "teaching",
     "begin": 2010,
     "end": 2014,
     "notes": [
-      "Taught data analysis best practices and molecular biology laboratory techniques in microbiome science, and administered the course's Linux servers."
+      {
+        "text": "Taught data analysis best practices and molecular biology laboratory techniques in microbiome science, and administered the course's Linux servers.",
+        "only": ["compbio"]
+      },
+      {
+        "text": "Taught data-analysis best practices and administered the course's Linux servers.",
+        "only": ["tech"]
+      }
     ]
   },
   {
