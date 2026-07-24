@@ -1,6 +1,22 @@
+const fs = require("fs");
+const crypto = require("crypto");
+const path = require("path");
+
 module.exports = function(eleventyConfig) {
   // Copy assets to output directory
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  // Content-hash cache-buster for the stylesheet, so a CSS change always
+  // forces browsers to fetch the matching file (prevents new HTML rendering
+  // against a stale cached styles.css).
+  eleventyConfig.addGlobalData("cssVersion", () => {
+    try {
+      const css = fs.readFileSync(path.join(__dirname, "src/assets/styles.css"));
+      return crypto.createHash("md5").update(css).digest("hex").slice(0, 8);
+    } catch (e) {
+      return "1";
+    }
+  });
 
   // Custom filter to sort by end date (descending), ongoing roles first;
   // ties broken by begin date (descending)
