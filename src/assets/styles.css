@@ -68,6 +68,16 @@ body {
 
 
 
+/* Name and title in the intro header */
+.resume-name {
+  font-size: 26px;
+}
+
+.resume-title {
+  font-size: 14px;
+  text-align: right;
+}
+
 /* Contact row: pipe separators between items */
 .contact-item + .contact-item::before {
   content: "|";

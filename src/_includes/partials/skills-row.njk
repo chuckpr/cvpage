@@ -1,7 +1,5 @@
-{%- for section in sections %}{% if section.heading == "skills" %}
 <div class="section-block">
   <h2 class="section-rule mt-0 mb-2 border-0 pb-0"><span class="d-inline-flex align-items-center"><iconify-icon icon="mdi:hammer-wrench" style="margin-right: 6px;"></iconify-icon>Skills</span></h2>
-  {%- if variant.skillClusters %}
   <div class="skill-clusters">
     {%- for cluster in variant.skillClusters %}
     <div class="skill-cluster">
@@ -10,8 +8,4 @@
     </div>
     {%- endfor %}
   </div>
-  {%- else %}
-  <div class="text-muted text-center" style="font-size: 13px; line-height: 1.6;">{% for i in section.items %}<span class="text-nowrap">{{ i.name }}</span>{{ " • " if not loop.last }}{% endfor %}</div>
-  {%- endif %}
 </div>
-{%- endif %}{% endfor %}

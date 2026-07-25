@@ -5,14 +5,14 @@
     "venue": "Phytobiomes Journal",
     "year": 2020,
     "note": "Editor's Pick",
-    "only": ["compbio", "tech"]
+    "only": ["compbio"]
   },
   {
     "authors": "<strong>Pepe-Ranney C</strong>, Campbell AN, Koechli CN, Berthrong S, Buckley DH",
     "title": "Unearthing the ecology of soil microorganisms using a high-resolution DNA-SIP approach to explore cellulose and xylose metabolism in soil",
     "venue": "Frontiers in Microbiology",
     "year": 2016,
-    "only": ["compbio", "tech"]
+    "only": ["compbio"]
   },
   {
     "authors": "<strong>Pepe-Ranney C</strong>, Koechli C, Potrafka R, et al.",

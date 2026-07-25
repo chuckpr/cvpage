@@ -5,13 +5,11 @@
       <div class="timeline-dot"></div>
       <div class="mb-0">
         <div class="d-flex justify-content-between align-items-center mb-0">
-          <h3 class="mt-0 mb-0" style="font-size: 16px;">{{ item.organization or item.institution }}</h3>
-          {% if not hideDates %}
-            <span class="text-end text-muted ms-2" style="font-family: monospace; letter-spacing: -0.02em; font-size: 13px; white-space: nowrap;">{{ item.period or (item.begin + "–" + item.end) }}</span>
-          {% endif %}
+          <h3 class="mt-0 mb-0" style="font-size: 16px;">{{ item.organization }}</h3>
+          <span class="text-end text-muted ms-2" style="font-family: monospace; letter-spacing: -0.02em; font-size: 13px; white-space: nowrap;">{{ item.begin + "–" + item.end }}</span>
         </div>
         <div class="d-flex justify-content-between align-items-baseline" style="margin-top: 4px;">
-          <h4 class="mt-0 mb-0" style="font-size: 13px; font-weight: 800; padding-left: 12px;">{{ item.title or (item.degree + " " + item.field) }}</h4>
+          <h4 class="mt-0 mb-0" style="font-size: 13px; font-weight: 800; padding-left: 12px;">{{ item.title }}</h4>
           {% if item.location and item.location.trim() %}
             <span class="float-end text-muted fst-italic" style="white-space: nowrap; font-size: 13px;">{{ item.location }}</span>
           {% endif %}

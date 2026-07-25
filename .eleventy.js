@@ -32,11 +32,6 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Custom filter for date range formatting
-  eleventyConfig.addFilter("formatDateRange", function(begin, end) {
-    return `${begin}–${end}`;
-  });
-
   // Keep only the entries that apply to a variant. Works on experience/education
   // items and on notes alike: an object may carry `only: [...]` or `except: [...]`,
   // and a plain string (a bare note) always applies. Nested children are filtered too.
@@ -66,18 +61,6 @@ module.exports = function(eleventyConfig) {
     return (note && typeof note === "object")
       ? ((note.variants && note.variants[variantKey]) || note.text)
       : note;
-  });
-
-  // Reorder/filter the skills section for a variant; other sections pass through unchanged
-  eleventyConfig.addFilter("sidebarForVariant", function(sections, variant) {
-    return sections.map(function(section) {
-      if (section.heading !== "skills") return section;
-      const byKey = Object.fromEntries(section.items.map(i => [i.key, i]));
-      const order = (variant && variant.skills) || section.items.map(i => i.key);
-      return Object.assign({}, section, {
-        items: order.map(k => byKey[k]).filter(Boolean)
-      });
-    });
   });
 
   // Development server options

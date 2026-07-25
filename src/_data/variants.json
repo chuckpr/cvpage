@@ -5,11 +5,8 @@
     "permalink": "/",
     "profile": {
       "title": "Genomics data scientist",
-      "titleSize": "14px",
-      "nameSize": "26px",
       "description": "Full-stack genomics data scientist who builds data systems end to end: data pipelines, front-end data products, machine learning, and statistical analysis."
     },
-    "publications": true,
     "skillClusters": [
       {
         "label": "ML & Modeling",
@@ -36,11 +33,8 @@
     "compact": true,
     "profile": {
       "title": "Data Scientist<br>&amp; Machine Learning Engineer",
-      "titleSize": "14px",
-      "nameSize": "26px",
       "description": "Data scientist and machine learning engineer who builds data systems end to end: pipelines, LLM and agentic systems, predictive models, and the statistical analysis behind them. Teaches statistical inference and data science at UNC-Chapel Hill."
     },
-    "publications": false,
     "skillClusters": [
       {
         "label": "ML & Modeling",
