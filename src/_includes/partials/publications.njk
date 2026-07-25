@@ -1,10 +1,10 @@
-<h2 class="section-rule mt-0 mb-2 border-0 pb-0"><span class="d-inline-flex align-items-center"><iconify-icon icon="mdi:file-document-outline" style="margin-right: 6px;"></iconify-icon>Selected Publications</span></h2>
+<h2 class="section-rule"><span class="section-rule-label">{% icon "mdi:file-document-outline" %}Selected Publications</span></h2>
 <div class="timeline">
   {% for p in pubs %}
-    <div class="timeline-item pub-item mb-1">
+    <div class="timeline-item pub-item">
       <div class="timeline-dot"></div>
-      <div style="font-size: 11px; line-height: 1.35;">
-        {{ p.authors | safe }}. "{{ p.title }}." <span class="fst-italic">{{ p.venue }}</span> ({{ p.year }}){% if p.note %} · <span style="font-weight: 700;">{{ p.note }}</span>{% endif %}.
+      <div class="pub-entry">
+        {{ p.authors | safe }}. "{{ p.title }}." <span class="pub-venue">{{ p.venue }}</span> ({{ p.year }}){% if p.note %} · <span class="pub-note">{{ p.note }}</span>{% endif %}.
       </div>
     </div>
   {% endfor %}

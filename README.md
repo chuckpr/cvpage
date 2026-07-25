@@ -12,6 +12,16 @@ with `permalink: "/"` is the default résumé; other variants deploy at
 `/cvpage/<permalink>` (e.g. `/cvpage/tech/`). A PDF is generated per variant as
 `resume-<key>.pdf`.
 
+There is no CSS framework: `src/assets/styles.css` is hand-written, with a `CONFIG`
+block of custom properties at the top for the values you tune most often — vertical
+and horizontal page margins (`--margin-v` / `--margin-h`), font sizes, spacing, and
+colors. Icons are inlined as SVG via the `{% icon %}` shortcode backed by `icons.js`
+— no icon CDN or runtime JS.
+
+On screen a red **page-break guide** marks where each printed 8.5×11in page ends, so
+you can see when an edit pushes content onto another page. It is screen-only (never
+in the PDF); delete its block in `styles.css` to turn it off.
+
 ## Development
 
 ```bash
@@ -52,6 +62,7 @@ The development server will be available at http://localhost:8080/cvpage/
 ├── scripts/
 │   └── generate-pdfs.js # Renders each variant to PDF with Puppeteer
 ├── _site/               # Generated output (git ignored)
+├── icons.js             # Inline SVG icon paths (see the {% icon %} shortcode)
 ├── .eleventy.js         # Eleventy configuration
 └── package.json         # Project dependencies
 ```
@@ -65,7 +76,9 @@ publish to GitHub Pages.
 - **Variants (titles, descriptions, skills)**: Edit `src/_data/variants.json`
 - **Name/location**: Edit `src/_data/profile.json`
 - **Work experience**: Edit `src/_data/experience.json` — entries and notes can
-  target variants with `only: [...]` / `except: [...]`, or be hidden with `hidden: true`
+  target variants with `only: [...]` / `except: [...]`, be hidden with
+  `hidden: true`, carry per-variant wording via `variants: { key: "..." }`, and set
+  bullet order with `rank` (a number, or per-variant `{ key: n }`)
 - **Education**: Edit `src/_data/education.json`
 - **Publications**: Edit `src/_data/publications.json`
 - **Contact/Links**: Edit `src/_data/sidebar.json`

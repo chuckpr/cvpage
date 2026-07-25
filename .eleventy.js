@@ -1,10 +1,19 @@
 const fs = require("fs");
 const crypto = require("crypto");
 const path = require("path");
+const icons = require("./icons.js");
 
 module.exports = function(eleventyConfig) {
   // Copy assets to output directory
   eleventyConfig.addPassthroughCopy("src/assets");
+
+  // Emit an inline SVG for a named icon (see icons.js). currentColor + a 1em
+  // .icon rule (styles.css) make it inherit the surrounding text's color/size.
+  eleventyConfig.addShortcode("icon", function(name) {
+    const d = icons[name];
+    if (!d) return "";
+    return `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="${d}"/></svg>`;
+  });
 
   // Content-hash cache-buster for the stylesheet, so a CSS change always
   // forces browsers to fetch the matching file (prevents new HTML rendering
@@ -61,6 +70,22 @@ module.exports = function(eleventyConfig) {
     return (note && typeof note === "object")
       ? ((note.variants && note.variants[variantKey]) || note.text)
       : note;
+  });
+
+  // Order notes by an optional `rank` field. `rank` is either a number (same
+  // order everywhere) or a per-variant object like { compbio: 4, tech: 1 }.
+  // Notes without a rank keep their declared order (stable sort).
+  eleventyConfig.addFilter("byRank", function(notes, variantKey) {
+    if (!Array.isArray(notes)) return notes;
+    const rankOf = (n) => {
+      const r = (n && typeof n === "object") ? n.rank : undefined;
+      if (r == null) return Infinity;
+      return (typeof r === "object") ? (r[variantKey] ?? Infinity) : r;
+    };
+    return notes
+      .map((n, i) => [n, i])
+      .sort((a, b) => (rankOf(a[0]) - rankOf(b[0])) || (a[1] - b[1]))
+      .map(([n]) => n);
   });
 
   // Development server options

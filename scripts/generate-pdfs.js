@@ -1,6 +1,6 @@
 // Render each CV variant from the built _site to a PDF with headless Chromium.
-// Runs the page's JS (Iconify icons) and honors the print CSS. Reads the variant
-// list from src/_data/variants.json so new variants are picked up automatically.
+// Honors the print CSS. Reads the variant list from src/_data/variants.json so
+// new variants are picked up automatically.
 
 const http = require("http");
 const fs = require("fs");
@@ -70,18 +70,6 @@ async function main() {
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: "networkidle0" });
 
-      // Give the Iconify web component a chance to render its SVGs before printing.
-      try {
-        await page.waitForFunction(
-          () =>
-            [...document.querySelectorAll("iconify-icon")].every(
-              (el) => el.shadowRoot && el.shadowRoot.querySelector("svg")
-            ),
-          { timeout: 8000 }
-        );
-      } catch {
-        console.warn(`  (icons did not all resolve for ${variant.key}; continuing)`);
-      }
       // Ensure the self-hosted web fonts are fully loaded before printing.
       await page.evaluate(() => document.fonts.ready);
       await new Promise((r) => setTimeout(r, 300));

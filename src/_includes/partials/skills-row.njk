@@ -1,10 +1,10 @@
 <div class="section-block">
-  <h2 class="section-rule mt-0 mb-2 border-0 pb-0"><span class="d-inline-flex align-items-center"><iconify-icon icon="mdi:hammer-wrench" style="margin-right: 6px;"></iconify-icon>Skills</span></h2>
+  <h2 class="section-rule"><span class="section-rule-label">{% icon "mdi:hammer-wrench" %}Skills</span></h2>
   <div class="skill-clusters">
     {%- for cluster in variant.skillClusters %}
     <div class="skill-cluster">
       <span class="skill-cluster-label">{{ cluster.label }}</span>
-      <span class="skill-cluster-items">{% for it in cluster.items %}<span class="text-nowrap">{{ it }}</span>{{ " · " if not loop.last }}{% endfor %}</span>
+      <span class="skill-cluster-items">{% for it in cluster.items %}<span class="skill">{{ it }}</span>{{ " · " if not loop.last }}{% endfor %}</span>
     </div>
     {%- endfor %}
   </div>
