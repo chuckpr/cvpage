@@ -1,13 +1,14 @@
 // Render each CV variant from the built _site to a PDF with headless Chromium.
-// Honors the print CSS. Reads the variant list from src/_data/variants.json so
-// new variants are picked up automatically.
+// Honors the print CSS. Reads the resolved variant list (base + any local
+// tailored variants) from src/_data/renderVariants.js so new variants — and
+// locally-defined tailored ones — are picked up automatically.
 
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
 const SITE_DIR = path.join(__dirname, "..", "_site");
-const VARIANTS = require(path.join(__dirname, "..", "src", "_data", "variants.json"));
+const VARIANTS = require(path.join(__dirname, "..", "src", "_data", "renderVariants.js"));
 const PATH_PREFIX = "/cvpage";
 
 const MIME = {

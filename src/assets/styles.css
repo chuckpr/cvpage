@@ -35,8 +35,8 @@
    ========================================================================== */
 :root {
   /* Page ------------------------------------------------------------------ */
-  --margin-v: 0.15in;             /* top & bottom page inset */
-  --margin-h: 0.4in;             /* left & right page inset */
+  --margin-v: 0.25in;             /* top & bottom page inset */
+  --margin-h: 0.6in;             /* left & right page inset */
 
   /* Fonts ----------------------------------------------------------------- */
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -44,18 +44,18 @@
 
   /* Type sizes ------------------------------------------------------------ */
   --name-size: 22px;              /* your name in the header */
-  --title-size: 12px;             /* role title beside your name */
+  --title-size: 16px;             /* role title beside your name */
   --summary-size: 14px;           /* intro paragraph */
   --location-size: 12px;        /* the line under your name */
   --section-heading-size: 12px;   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
   --org-size: 14px;               /* employer / school names */
   --role-title-size: 12px;        /* job titles, locations, date ranges */
-  --body-size: 10px;              /* bullet text */
+  --body-size: 11px;              /* bullet text */
   --skills-size: 12px;          /* skills list */
 
   /* Spacing --------------------------------------------------------------- */
   --section-gap: 10px;            /* space between major sections */
-  --bullet-indent: 14px;          /* bullet-list indent */
+  --bullet-indent: 10px;          /* bullet-list indent */
 
   /* Colors ---------------------------------------------------------------- */
   --color-text: #212529;          /* body text and dark accents */
@@ -108,8 +108,11 @@ a  { color: inherit; text-decoration: none; }
 
 /* ==========================================================================
    PAGE / SHEET
-   Content flows naturally onto a second page if needed. Page insets come from
-   @page margins in print and from padding on screen.
+   Each .sheet is one physical page: the résumé emits an explicit sheet per
+   page (page 1 = main content, page 2 = publications) rather than letting one
+   long column flow across breaks. A sheet is a fixed page height so its content
+   can be distributed to fill it. Page insets come from @page margins in print
+   and from padding on screen.
    ========================================================================== */
 .sheet-outer { margin: 0; }
 
@@ -124,7 +127,16 @@ a  { color: inherit; text-decoration: none; }
 }
 
 .resume-body {
+  height: 100%;
   padding: var(--margin-v) var(--margin-h);
+}
+
+/* Page 1 distributes its sections vertically so they span the full sheet
+   instead of bunching at the top. */
+.resume-body--fill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -314,8 +326,8 @@ a  { color: inherit; text-decoration: none; }
   color: var(--color-muted);
 }
 
-/* Bullet text; size is themeable per variant (see compact mode) so a shorter
-   résumé can use larger, more legible text and fill the page. */
+/* Bullet text; size is themeable via --body-size so a shorter résumé can use
+   larger, more legible text and fill the page. */
 .note-body {
   font-size: var(--body-size);
   line-height: 1.35;
@@ -424,35 +436,6 @@ a  { color: inherit; text-decoration: none; }
 
 
 /* ==========================================================================
-   COMPACT MODE — one-page variant. Larger body text with tighter spacing,
-   tuned so a near-full résumé fills a single page. Expressed mostly as token
-   overrides so the difference from the default is legible at a glance.
-   ========================================================================== */
-.resume-body.compact {
-  --body-size: 11.5px;
-  --skills-size: 11.5px;
-  --section-gap: 6px;
-}
-
-.resume-body.compact .note-body,
-.resume-body.compact .skill-clusters {
-  line-height: 1.3;
-}
-
-.resume-body.compact .skill-clusters {
-  gap: 2px;
-}
-
-.resume-body.compact .section-rule {
-  margin-bottom: 4px;
-}
-
-.resume-body.compact .timeline-item {
-  margin-bottom: 0;
-}
-
-
-/* ==========================================================================
    SCREEN — page-on-desk presentation
    ========================================================================== */
 @media screen {
@@ -460,6 +443,9 @@ a  { color: inherit; text-decoration: none; }
     background: #e0e0e0;
   }
 
+  /* Each sheet reads as a letter page: at least one page tall, its own margins,
+     and a gap between stacked sheets. Back-matter sheets (publications, talks)
+     grow past a page when long; the fill sheet is pinned to exactly one page. */
   .sheet {
     background: white;
     box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
@@ -467,46 +453,8 @@ a  { color: inherit; text-decoration: none; }
     min-height: 11in;
   }
 
-  /* --- Page-break guide (screen only; never in the PDF) ------------------
-     A red line marks where each printed 8.5x11in page ends, so you can see
-     when an edit pushes content onto another page. Because @page adds a margin
-     to the top AND bottom of every page, the printable content height per page
-     is 11in minus twice --margin-v. Any content crossing a red line spills onto
-     the next printed page. To turn the guide off, delete this block. */
-  .resume-body {
-    position: relative;
-  }
-
-  .resume-body::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: var(--margin-v);                 /* top of the content area */
-    bottom: 0;
-    pointer-events: none;
-    background: repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent calc(11in - 2 * var(--margin-v) - 1px),
-      rgba(220, 53, 69, 0.6) calc(11in - 2 * var(--margin-v) - 1px),
-      rgba(220, 53, 69, 0.6) calc(11in - 2 * var(--margin-v))
-    );
-  }
-
-  .resume-body::before {
-    content: "page break";
-    position: absolute;
-    right: 0;
-    top: calc(11in - var(--margin-v)); /* rides the first break line */
-    transform: translateY(-100%);
-    padding: 0 4px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(220, 53, 69, 0.9);
-    pointer-events: none;
+  .sheet--fill {
+    height: 11in;
   }
 }
 
@@ -530,17 +478,30 @@ a  { color: inherit; text-decoration: none; }
      specificity. Letting the sheet fill the printable area (page width minus
      the @page margins) keeps the print layout identical to the screen's 7.3in
      content column: same line wrapping, no shrink-to-fit scaling. That 1:1
-     match is what makes the on-screen page-break guide accurate. */
+     match keeps the printed PDF pages identical to the on-screen sheets. */
   .sheet-outer.letter .sheet {
     width: auto;
   }
 
   .sheet {
     background: white;
-    min-height: 0;
     box-shadow: none;
     margin: 0;
-    overflow: visible;
+  }
+
+  /* The fill sheet is pinned to the printable area (page height minus the @page
+     top/bottom margins) so its space-between distribution matches the on-screen
+     page. The small safety subtraction keeps a full sheet from rounding a sliver
+     onto a phantom next page; overflow:hidden clips any residual sub-pixel spill.
+     Back-matter sheets are left to flow naturally across pages. */
+  .sheet--fill {
+    height: calc(11in - 2 * var(--margin-v) - 2px);
+    overflow: hidden;
+  }
+
+  /* Every sheet after the first starts a fresh printed page. */
+  .sheet + .sheet {
+    break-before: page;
   }
 
   /* @page margins provide the page inset in print, so drop the screen padding. */

@@ -2,9 +2,18 @@
   {
     "key": "compbio",
     "permalink": "/",
+    "publications": ["epulopiscium-2023", "cellulose-economy-2021", "sweetpotato-2020", "dnasip-2016", "biocrust-2015", "biofilm-carbon-2015", "yellowstone-2012"],
+    "talks": ["aiche-2017", "cbgp-madrid-2018", "agbiotech-2016", "ecofab-2016", "agu-2015", "astrobio-2012"],
     "profile": {
       "title": "Genomics data scientist",
       "description": "Full-stack genomics data scientist who builds data systems end to end: data pipelines, front-end data products, machine learning, and statistical analysis."
+    },
+    "select": {
+      "elevatebio": ["eb-active-learning", "eb-evo2-classifier", "eb-catalog"],
+      "agbiome": ["ab-platform", "ab-genome-api"],
+      "teaching-unc": ["teach-courses"],
+      "cornell": ["cornell-sip"],
+      "teaching-mbl": ["mbl-teaching"]
     },
     "skillClusters": [
       {
@@ -51,7 +60,8 @@
           "Polars / DuckDB",
           "Jupyter",
           "Marimo",
-          "LLM agents (Anthropic SDK)",
+          "HuggingFace",
+          "LLM agents",
           "Claude Code & Pi"
         ]
       }
@@ -60,10 +70,15 @@
   {
     "key": "tech",
     "permalink": "/tech/",
-    "compact": true,
     "profile": {
       "title": "Data Scientist<br>&amp; Machine Learning Engineer",
       "description": "Data scientist and machine learning engineer who builds data systems end to end: pipelines, LLM and agentic systems, predictive models, and the statistical analysis behind them. Teaches statistical inference and data science at UNC-Chapel Hill."
+    },
+    "select": {
+      "elevatebio": ["eb-agentic", "eb-active-learning", "eb-catalog", "eb-evo2-classifier"],
+      "agbiome": ["ab-platform", "ab-genome-api", "ab-infra"],
+      "teaching-unc": ["teach-courses"],
+      "cornell": ["cornell-sip"]
     },
     "skillClusters": [
       {
@@ -108,8 +123,10 @@
           "Bash",
           "Jupyter",
           "Marimo",
+          "HuggingFace",
           "LLM agents (Anthropic SDK)",
-          "Claude Code & Pi"
+          "Claude Code & Pi",
+          "Neovim"
         ]
       }
     ]

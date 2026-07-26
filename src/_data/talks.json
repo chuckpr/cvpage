@@ -1,0 +1,41 @@
+{
+  "aiche-2017": {
+    "title": "40,000+ Genomes and counting: Computational lessons from building a giant culture collection",
+    "venue": "AIChE — Microbial communities and microbiomes for agriculture and bioenergy session",
+    "year": 2017
+  },
+  "cbgp-madrid-2018": {
+    "title": "50,000 Genomes and counting: how to manage and explore the data from your giant collection of microbial isolates",
+    "venue": "New Frontiers in Plant Biology Workshop",
+    "location": "CBGP-Madrid",
+    "year": 2018
+  },
+  "agbiotech-2016": {
+    "title": "Leveraging analytics: Putting big data to good use",
+    "venue": "Ag Biotech Professional Forum",
+    "location": "North Carolina Biotechnology Center",
+    "year": 2016
+  },
+  "ecofab-2016": {
+    "title": "Tracking carbon into and through the soil microbial community with DNA-SIP",
+    "venue": "EcoFAB Workshop",
+    "location": "Joint Genome Institute",
+    "year": 2016
+  },
+  "agu-2015": {
+    "title": "Targeting unknowns just underfoot: Microbial ecology and community genomics of C cycling in soil informed and enabled with DNA-SIP",
+    "venue": "American Geophysical Union Fall Meeting — 'omics session",
+    "year": 2015
+  },
+  "astrobio-2012": {
+    "title": "Cyanobacterial construction of finely laminated siliceous stromatolites in a Yellowstone National Park hot spring",
+    "venue": "Astrobiology Science Conference — Microbes in lithifying systems session",
+    "year": 2012
+  },
+  "microsupergroup-2009": {
+    "title": "¹⁴C and microbial diversity study of Yellowstone siliceous stromatolites: searching for the depositional community",
+    "venue": "Microbiology Supergroup Meeting",
+    "location": "MCDB, University of Colorado Boulder",
+    "year": 2009
+  }
+}

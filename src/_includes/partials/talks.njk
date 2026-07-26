@@ -1,0 +1,11 @@
+<h2 class="section-rule"><span class="section-rule-label">{% icon "mdi:microphone" %}Invited Talks</span></h2>
+<div class="timeline">
+  {% for t in talks %}
+    <div class="timeline-item pub-item">
+      <div class="timeline-dot"></div>
+      <div class="pub-entry">
+        "{{ t.title }}." <span class="pub-venue">{{ t.venue }}</span>{% if t.location %}, {{ t.location }}{% endif %} ({{ t.year }}).
+      </div>
+    </div>
+  {% endfor %}
+</div>

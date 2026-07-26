@@ -1,31 +1,45 @@
-[
-  {
+{
+  "epulopiscium-2023": {
+    "authors": "Sannino DR, Arroyo FA, <strong>Pepe-Ranney C</strong>, Chen W, Volland JM, et al.",
+    "title": "The exceptional form and function of the giant bacterium Ca. Epulopiscium viviparus revolves around its sodium motive force",
+    "venue": "Proceedings of the National Academy of Sciences (PNAS)",
+    "year": 2023
+  },
+  "cellulose-economy-2021": {
+    "authors": "Wilhelm RC, <strong>Pepe-Ranney C</strong>, Weisenhorn P, Lipton M, Buckley DH",
+    "title": "Competitive exclusion and metabolic dependency among microorganisms structure the cellulose economy of an agricultural soil",
+    "venue": "mBio",
+    "year": 2021
+  },
+  "sweetpotato-2020": {
     "authors": "<strong>Pepe-Ranney C</strong>, Keyser C, Trimble JK, Bissinger B",
     "title": "Surveying the sweetpotato rhizosphere, endophyte, and surrounding soil microbiomes at two North Carolina farms reveals underpinnings of sweetpotato microbiome community assembly",
     "venue": "Phytobiomes Journal",
     "year": 2020,
-    "note": "Editor's Pick",
-    "only": ["compbio"]
+    "note": "Editor's Pick"
   },
-  {
+  "dnasip-2016": {
     "authors": "<strong>Pepe-Ranney C</strong>, Campbell AN, Koechli CN, Berthrong S, Buckley DH",
     "title": "Unearthing the ecology of soil microorganisms using a high-resolution DNA-SIP approach to explore cellulose and xylose metabolism in soil",
     "venue": "Frontiers in Microbiology",
-    "year": 2016,
-    "only": ["compbio"]
+    "year": 2016
   },
-  {
+  "biocrust-2015": {
     "authors": "<strong>Pepe-Ranney C</strong>, Koechli C, Potrafka R, et al.",
     "title": "Non-cyanobacterial diazotrophs mediate dinitrogen fixation in biological soil crusts during early crust formation",
     "venue": "ISME Journal",
-    "year": 2015,
-    "only": ["compbio"]
+    "year": 2015
   },
-  {
+  "biofilm-carbon-2015": {
+    "authors": "<strong>Pepe-Ranney C</strong>, Hall EK",
+    "title": "The effect of carbon subsidies on marine planktonic niche partitioning and recruitment during biofilm assembly",
+    "venue": "Frontiers in Microbiology",
+    "year": 2015
+  },
+  "yellowstone-2012": {
     "authors": "<strong>Pepe-Ranney C</strong>, Berelson WM, Corsetti FA, Treants M, Spear JR",
     "title": "Cyanobacterial construction of hot-spring siliceous stromatolites in Yellowstone National Park",
     "venue": "Environmental Microbiology",
-    "year": 2012,
-    "only": ["compbio"]
+    "year": 2012
   }
-]
+}

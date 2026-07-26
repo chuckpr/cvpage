@@ -1,18 +1,23 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: variants
+  data: renderVariants
   size: 1
   alias: variant
 permalink: "{{ variant.permalink }}"
 ---
 
+{% set pubs = publications | pick(variant.publications) %}
+{% set talks = talks | pick(variant.talks) %}
+
 <div class="sheet-outer letter">
 <div class="pdf-download-row">
   <a href="{{ ('/resume-' + variant.key + '.pdf') | url }}" class="pdf-download">Download PDF</a>
 </div>
-<div class="sheet">
-<div class="resume-body{{ ' compact' if variant.compact }}">
+
+{# Page 1 — main résumé. Its sections space out vertically to fill the page. #}
+<div class="sheet sheet--fill">
+<div class="resume-body resume-body--fill">
 
 <div id="intro" class="intro">
   <div class="intro-header">
@@ -27,13 +32,13 @@ permalink: "{{ variant.permalink }}"
 {% include "partials/skills-row.njk" %}
 
 <div class="section-block">
-  {% set items = experience | forVariant(variant.key) | section("experience") | sortByDateDesc %}
+  {% set items = experience | section("experience") | selected(variant.select) | sortByDateDesc %}
   {% set sectionTitle = "Experience" %}
   {% set sectionIcon = "mdi:office-building" %}
   {% include "partials/cv-item.njk" %}
 </div>
 
-{% set teaching = experience | forVariant(variant.key) | section("teaching") | sortByDateDesc %}
+{% set teaching = experience | section("teaching") | selected(variant.select) | sortByDateDesc %}
 {% if teaching and teaching.length %}
 <div class="section-block">
   {% set items = teaching %}
@@ -50,13 +55,26 @@ permalink: "{{ variant.permalink }}"
   {% include "partials/education.njk" %}
 </div>
 
-{% set pubs = publications | forVariant(variant.key) %}
-{% if pubs and pubs.length %}
-<div class="section-block">
-  {% include "partials/publications.njk" %}
+</div>
+</div>
+
+{# Page 2 — back matter (publications, invited talks). Flows across pages if
+   long; only rendered when the variant selects something to show. #}
+{% if (pubs and pubs.length) or (talks and talks.length) %}
+<div class="sheet">
+<div class="resume-body">
+  {% if pubs and pubs.length %}
+  <div class="section-block">
+    {% include "partials/publications.njk" %}
+  </div>
+  {% endif %}
+  {% if talks and talks.length %}
+  <div class="section-block">
+    {% include "partials/talks.njk" %}
+  </div>
+  {% endif %}
+</div>
 </div>
 {% endif %}
 
-</div>
-</div>
 </div>

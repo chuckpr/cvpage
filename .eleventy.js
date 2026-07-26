@@ -41,21 +41,18 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Keep only the entries that apply to a variant. Works on experience/education
-  // items and on notes alike: an object may carry `only: [...]` or `except: [...]`,
-  // and a plain string (a bare note) always applies. Nested children are filtered too.
-  eleventyConfig.addFilter("forVariant", function(entries, variantKey) {
-    if (!Array.isArray(entries)) return entries;
-    const applies = (e) => {
-      if (!e || typeof e !== "object") return true;
-      if (e.hidden) return false;              // kept in the data, rendered nowhere
-      if (e.only) return e.only.includes(variantKey);
-      if (e.except) return !e.except.includes(variantKey);
-      return true;
-    };
-    return entries.filter(applies).map((e) =>
-      (e && e.children) ? Object.assign({}, e, { children: e.children.filter(applies) }) : e
-    );
+  // Keep only the jobs a variant selected: a job renders iff its `id` is a key
+  // in the variant's `select` map. Omitting an id hides that whole job.
+  eleventyConfig.addFilter("selected", function(items, select) {
+    if (!Array.isArray(items) || !select) return [];
+    return items.filter((i) => i && Object.prototype.hasOwnProperty.call(select, i.id));
+  });
+
+  // Pull values from a keyed bank (bullets, publications) in the order an id
+  // list declares. Unknown or missing ids are dropped. `ids` absent → nothing.
+  eleventyConfig.addFilter("pick", function(bank, ids) {
+    if (!bank || !Array.isArray(ids)) return [];
+    return ids.map((id) => bank[id]).filter(Boolean);
   });
 
   // Partition experience entries by section. Items without a `section` key
@@ -70,22 +67,6 @@ module.exports = function(eleventyConfig) {
     return (note && typeof note === "object")
       ? ((note.variants && note.variants[variantKey]) || note.text)
       : note;
-  });
-
-  // Order notes by an optional `rank` field. `rank` is either a number (same
-  // order everywhere) or a per-variant object like { compbio: 4, tech: 1 }.
-  // Notes without a rank keep their declared order (stable sort).
-  eleventyConfig.addFilter("byRank", function(notes, variantKey) {
-    if (!Array.isArray(notes)) return notes;
-    const rankOf = (n) => {
-      const r = (n && typeof n === "object") ? n.rank : undefined;
-      if (r == null) return Infinity;
-      return (typeof r === "object") ? (r[variantKey] ?? Infinity) : r;
-    };
-    return notes
-      .map((n, i) => [n, i])
-      .sort((a, b) => (rankOf(a[0]) - rankOf(b[0])) || (a[1] - b[1]))
-      .map(([n]) => n);
   });
 
   // Development server options

@@ -4,6 +4,9 @@ node_modules/
 # Build output
 _site/
 
+# Local-only tailored résumé variants (never deployed). See tailored.example.json.
+src/_data/tailored.json
+
 # OS files
 .DS_Store
 Thumbs.db

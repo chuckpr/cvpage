@@ -13,17 +13,15 @@
           <span class="role-location">{{ item.location }}</span>
         {% endif %}
       </div>
-      {% set notes = item.notes | forVariant(variant.key) | byRank(variant.key) %}
+      {% set notes = item.bullets | pick(variant.select[item.id]) %}
       {% if notes and notes.length > 0 %}
         <div class="note-body">
           <ul class="note-list">
             {% for note in notes %}
-              <li>{{ note | noteText(variant.key) }}
+              <li>{{ note | noteText(variant.textVariant) }}
                 {% if note.children and note.children.length %}
                   <ul class="note-sublist">
-                    {% for child in note.children %}
-                      <li>{{ child | noteText(variant.key) }}</li>
-                    {% endfor %}
+                    {% for child in note.children %}<li>{{ child | noteText(variant.textVariant) }}</li>{% endfor %}
                   </ul>
                 {% endif %}
               </li>

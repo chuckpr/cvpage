@@ -1,0 +1,11 @@
+[
+  {
+    "key": "acme-mle",
+    "base": "tech",
+    "profile": { "title": "Senior Machine Learning Engineer" },
+    "select": {
+      "elevatebio": ["eb-agentic", "eb-active-learning", "eb-catalog"],
+      "agbiome": ["ab-platform"]
+    }
+  }
+]
