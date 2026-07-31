@@ -245,6 +245,12 @@ a  { color: inherit; text-decoration: none; }
   margin-top: var(--section-gap);
 }
 
+/* Back-matter pages (publications, talks, etc.) flow top-down with room to
+   spare, so give their sections more breathing room than the packed page 1. */
+.resume-body:not(.resume-body--fill) .section-block {
+  margin-top: 26px;
+}
+
 
 /* ==========================================================================
    TIMELINE — shared by experience, teaching, education, publications
@@ -358,7 +364,7 @@ a  { color: inherit; text-decoration: none; }
 
 .skill-cluster {
   display: grid;
-  grid-template-columns: 9.5em 1fr;
+  grid-template-columns: 11em 1fr;
   gap: 8px;
   align-items: baseline;
 }
@@ -507,6 +513,14 @@ a  { color: inherit; text-decoration: none; }
   /* @page margins provide the page inset in print, so drop the screen padding. */
   .resume-body {
     padding: 0;
+  }
+
+  /* The fill page distributes sections with space-between, which pins the last
+     section flush to the sheet's bottom edge — leaving its final line with no
+     clearance, so print shaves the descenders. Reserve a bottom inset inside
+     the fill box (content has ample slack) so the last line always clears. */
+  .resume-body--fill {
+    padding-bottom: 0.2in;
   }
 
   /* Keep entries and headings from splitting awkwardly across page breaks. */

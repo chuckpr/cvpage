@@ -9,27 +9,39 @@
     "bullets": {
       "eb-active-learning": {
         "variants": {
-          "compbio": "Led the supervised-learning strategy for protein optimization: protein language model embeddings with supervised fitness heads, plus active learning and Bayesian optimization to select each design-build-test round's variant library. Nominated hundreds of candidate variants per round and drove multi-objective optimization, surfacing variants with up to a 1.5X increase in activity.",
-          "tech": "Led an active-learning and Bayesian-optimization program that optimizes candidate designs under a fixed experimental budget: embeddings from large pretrained sequence models feed supervised performance predictors, and adaptive selection targets the highest-value candidates each round. Delivered up to a 1.5X performance gain."
+          "compbio": "Led the supervised-learning strategy for protein optimization: protein-language-model embeddings with supervised fitness heads, plus active learning and Bayesian optimization to select each design-build-test round's variant library, surfacing variants with up to a 1.5X increase in activity.",
+          "tech": "Led the modeling behind our protein-design program: represented each candidate protein with embeddings from a pretrained protein language model, trained models on those to predict how well each would perform, and used the predictions to choose which few to test each round given limited experimental resources. Improved activity by up to 1.5x in the best designs."
         }
       },
       "eb-evo2-classifier": {
         "variants": {
           "compbio": "Built the training dataset for and trained an XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position at single-nucleotide resolution with >90% accuracy, more than doubling (>2X) the MGE training examples available for downstream generative applications.",
-          "tech": "Built the training data for and trained a gradient-boosted (XGBoost) classifier on embeddings from a large foundation model, reaching >90% accuracy at single-record resolution and more than doubling annotation rate."
+          "tech": "Built and labeled the training data and trained an XGBoost classifier on nucleotide embeddings from Evo2 (a genomic language model), sorting genomic sequence into categories at over 90% accuracy and more than doubling how much of our data we could annotate automatically."
+        }
+      },
+      "eb-ngs": {
+        "variants": {
+          "compbio": "Built NGS pipelines (amplicon sequencing, unidirectional sequencing, GUIDE-Seq, DiGenome-Seq) to assess on- and off-target gene-editing outcomes, and statistically analyzed the results to quantify editing efficiency and specificity across therapeutic programs.",
+          "tech": "Built the analysis pipelines that turn raw sequencing data into quantified, statistically characterized results, spanning genome-wide off-target detection, targeted allele counting, and whole-genome assays."
         }
       },
       "eb-catalog": {
         "variants": {
-          "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, delivering active gene-editing effectors across three editing modalities and contributing 300k+ distinct training examples for generative-model fine-tuning; these became key pillars of the company's technology portfolio.",
+          "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across three editing modalities and contributing 300k+ distinct training examples for generative-model fine-tuning; these became key pillars of the company's technology portfolio.",
           "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs."
         }
       },
       "eb-agentic": {
         "variants": {
-          "compbio": "Built a self-improving agentic system (Anthropic SDK) that ingests and reformats experimental data submissions across three partnered program campaigns, validating output against a schema and feeding successes into a few-shot example bank.",
-          "tech": "Designed and built a self-improving agentic system on the Anthropic SDK that converts unstructured submissions into schema-validated structured records, with an automated few-shot retrieval loop that learns from its own successful outputs; deployed across three concurrent program pipelines."
+          "compbio": "Built a self-improving agentic system (Anthropic SDK on AWS Bedrock) that ingests and reformats experimental data submissions across three partnered program campaigns, validating output against a schema and feeding successes into a few-shot example bank.",
+          "tech": "Built a data processing agent (Anthropic SDK) that turns messy, inconsistent data submissions into clean, standardized records and checks its own output against the expected format. It learns from past successes to keep improving, and now runs across three program pipelines."
         }
+      },
+      "eb-claude-code-enablement": {
+        "text": "Set up (using IaC) and deployed a cloud-based system that lets lab scientists with little coding experience use Claude Code for their own data analysis, enforcing constraints on sensitive data, internal networking, and model endpoint access."
+      },
+      "eb-cloud-hpc": {
+        "text": "Built a cloud-based HPC system that runs and elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines without managing clusters."
       },
       "eb-benchmarking": {
         "text": "Developed the company's ML benchmarking and active-learning software."
@@ -47,7 +59,7 @@
       "ab-platform": {
         "variants": {
           "compbio": "Designed and led AgBiome's AWS genomics data platform: an event-driven system of dozens of pipelines (from k-mer sketching to biosynthetic gene cluster annotation) processing 20,000+ isolated and sequenced microorganisms annually into a queryable database that informed R&D.",
-          "tech": "Designed and led an event-driven data platform: ingestion pipelines, developer tooling, and a queryable warehouse serving R&D, running dozens of pipelines over 20,000+ new datasets per year."
+          "tech": "Designed and led the data platform that processed more than 20,000 new datasets a year through dozens of automated pipelines into a database our R&D teams could query directly."
         }
       },
       "ab-genome-api": {
@@ -58,8 +70,8 @@
       },
       "ab-publication": {
         "variants": {
-          "compbio": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S/metagenomic surveys resolving sweetpotato microbiome community assembly.",
-          "tech": "Published first-author, peer-reviewed statistical analysis (multivariate and compositional methods) of large observational survey data; an Editor's Pick in its journal."
+          "compbio": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S rRNA gene amplicon surveys resolving sweetpotato microbiome community assembly.",
+          "tech": "First author on a peer-reviewed study applying statistical analysis to a large survey dataset; selected as an Editor's Pick by the journal."
         }
       },
       "ab-infra": {
@@ -69,7 +81,7 @@
         }
       },
       "ab-blog": {
-        "text": "Founded, built, and deployed an internal data science blog (static site on AWS S3) and contributed regularly, communicating data narratives and results across the company."
+        "text": "Started and ran an internal data science blog and wrote for it regularly, sharing analyses and results in plain language across the company."
       }
     }
   },
@@ -87,7 +99,7 @@
         "children": [
           "Data Science Basics (BIOS-512). grew from 11 students to 50+ with a full waitlist",
           "Statistical inference and modeling (DATA-730)",
-          "AI/ML and statistical methods for studying biology (DATA-791)"
+          "AI/ML and statistical analysis of 'omics data, including RNA-Seq (DATA-791)"
         ]
       }
     }
@@ -103,7 +115,7 @@
       "cornell-sip": {
         "variants": {
           "compbio": "Designed and applied a microbiome analysis pipeline for DNA-SIP-based microbial ecology studies of agricultural soils and biological soil crusts.",
-          "tech": "Postdoctoral researcher: built reproducible data-analysis pipelines and published multiple first-author, peer-reviewed studies."
+          "tech": "Postdoctoral researcher: wrote reproducible data-analysis pipelines and published several first-author, peer-reviewed studies."
         }
       }
     }

@@ -19,6 +19,10 @@ permalink: "{{ variant.permalink }}"
 <div class="sheet sheet--fill">
 <div class="resume-body resume-body--fill">
 
+{# Header and skills stay grouped at the top so the space-between fill only
+   spreads the experience/teaching/education sections below — keeping the
+   header-to-skills gap tight rather than distributed. #}
+<div class="fill-top">
 <div id="intro" class="intro">
   <div class="intro-header">
     <h1 class="resume-name">{{ profile.name }}</h1>
@@ -30,18 +34,15 @@ permalink: "{{ variant.permalink }}"
 </div>
 
 {% include "partials/skills-row.njk" %}
-
-<div class="section-block">
-  {% set items = experience | section("experience") | selected(variant.select) | sortByDateDesc %}
-  {% set sectionTitle = "Experience" %}
-  {% set sectionIcon = "mdi:office-building" %}
-  {% include "partials/cv-item.njk" %}
 </div>
 
-{% set teaching = experience | section("teaching") | selected(variant.select) | sortByDateDesc %}
-{% if teaching and teaching.length %}
+{# Experience and Teaching render in either order per variant.teachingFirst. #}
+{% set experienceItems = experience | section("experience") | selected(variant.select) | sortByDateDesc %}
+{% set teachingItems = experience | section("teaching") | selected(variant.select) | sortByDateDesc %}
+
+{% if variant.teachingFirst and teachingItems and teachingItems.length %}
 <div class="section-block">
-  {% set items = teaching %}
+  {% set items = teachingItems %}
   {% set sectionTitle = "Teaching" %}
   {% set sectionIcon = "mdi:human-male-board" %}
   {% include "partials/cv-item.njk" %}
@@ -49,20 +50,46 @@ permalink: "{{ variant.permalink }}"
 {% endif %}
 
 <div class="section-block">
+  {% set items = experienceItems %}
+  {% set sectionTitle = "Experience" %}
+  {% set sectionIcon = "mdi:office-building" %}
+  {% include "partials/cv-item.njk" %}
+</div>
+
+{% if not variant.teachingFirst and teachingItems and teachingItems.length %}
+<div class="section-block">
+  {% set items = teachingItems %}
+  {% set sectionTitle = "Teaching" %}
+  {% set sectionIcon = "mdi:human-male-board" %}
+  {% include "partials/cv-item.njk" %}
+</div>
+{% endif %}
+
+{% if not variant.educationSecondPage %}
+<div class="section-block">
   {% set items = education | sortByDateDesc %}
   {% set sectionTitle = "Education" %}
   {% set sectionIcon = "mdi:school" %}
   {% include "partials/education.njk" %}
 </div>
+{% endif %}
 
 </div>
 </div>
 
 {# Page 2 — back matter (publications, invited talks). Flows across pages if
    long; only rendered when the variant selects something to show. #}
-{% if (pubs and pubs.length) or (talks and talks.length) %}
+{% if variant.educationSecondPage or (pubs and pubs.length) or (talks and talks.length) %}
 <div class="sheet">
 <div class="resume-body">
+  {% if variant.educationSecondPage %}
+  <div class="section-block">
+    {% set items = education | sortByDateDesc %}
+    {% set sectionTitle = "Education" %}
+    {% set sectionIcon = "mdi:school" %}
+    {% include "partials/education.njk" %}
+  </div>
+  {% endif %}
   {% if pubs and pubs.length %}
   <div class="section-block">
     {% include "partials/publications.njk" %}

@@ -7,8 +7,12 @@
         <h3 class="role-org">{{ item.organization }}</h3>
         <span class="role-dates">{{ item.begin + "–" + item.end }}</span>
       </div>
+      {# A variant may override a role title per company via variant.titles[id]
+         (e.g. present an IC-oriented title); otherwise use the shared title. #}
+      {% set roleTitle = item.title %}
+      {% if variant.titles and variant.titles[item.id] %}{% set roleTitle = variant.titles[item.id] %}{% endif %}
       <div class="role-subhead">
-        <h4 class="role-title">{{ item.title }}</h4>
+        <h4 class="role-title">{{ roleTitle }}</h4>
         {% if item.location and item.location.trim() %}
           <span class="role-location">{{ item.location }}</span>
         {% endif %}

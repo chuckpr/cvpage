@@ -40,7 +40,10 @@ const resolved = tailored.map((t) => {
     select: t.select || b.select,
     publications: t.publications ?? b.publications,
     permalink: `/tailored/${t.key}/`,
-    textVariant: b.textVariant, // reuse the base variant's phrasing
+    // Reuse the base variant's phrasing unless the tailored variant supplies its
+    // own textVariant — a bullet with no matching phrasing falls back to its
+    // base/text wording (see the noteText filter), so partial overrides are fine.
+    textVariant: t.textVariant || b.textVariant,
   };
 });
 

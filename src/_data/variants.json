@@ -70,63 +70,66 @@
   {
     "key": "tech",
     "permalink": "/tech/",
+    "teachingFirst": true,
     "profile": {
       "title": "Data Scientist<br>&amp; Machine Learning Engineer",
       "description": "Data scientist and machine learning engineer who builds data systems end to end: pipelines, LLM and agentic systems, predictive models, and the statistical analysis behind them. Teaches statistical inference and data science at UNC-Chapel Hill."
     },
     "select": {
-      "elevatebio": ["eb-agentic", "eb-active-learning", "eb-catalog", "eb-evo2-classifier"],
-      "agbiome": ["ab-platform", "ab-genome-api", "ab-infra"],
       "teaching-unc": ["teach-courses"],
+      "elevatebio": ["eb-active-learning", "eb-evo2-classifier", "eb-agentic", "eb-claude-code-enablement"],
+      "agbiome": ["ab-platform", "ab-publication", "ab-blog"],
       "cornell": ["cornell-sip"]
     },
     "skillClusters": [
-      {
-        "label": "ML & Modeling",
-        "items": [
-          "machine learning",
-          "LLM & agentic systems",
-          "PyTorch",
-          "scikit-learn",
-          "XGBoost",
-          "Bayesian optimization",
-          "statistical inference"
-        ]
-      },
-      {
-        "label": "Data Engineering & Cloud",
-        "items": [
-          "AWS (CDK, Batch, Lambda, Fargate, S3)",
-          "event-driven pipelines",
-          "Docker",
-          "Terraform",
-          "GitHub Actions",
-          "Modal",
-          "Linux"
-        ]
-      },
-      {
-        "label": "Data Products & Analytics",
-        "items": [
-          "SQL",
-          "Polars / DuckDB",
-          "data warehousing (Athena)",
-          "dashboards (Dash)",
-          "Quarto"
-        ]
-      },
       {
         "label": "Languages & Tools",
         "items": [
           "Python",
           "R",
+          "SQL",
           "Bash",
-          "Jupyter",
-          "Marimo",
-          "HuggingFace",
-          "LLM agents (Anthropic SDK)",
-          "Claude Code & Pi",
-          "Neovim"
+          "Git",
+          "Jupyter / Marimo",
+          "Neovim",
+          "Claude Code / Pi"
+        ]
+      },
+      {
+        "label": "ML, Stats & AI",
+        "items": [
+          "machine learning",
+          "classification models",
+          "statistical inference",
+          "scikit-learn",
+          "XGBoost",
+          "PyTorch",
+          "Bayesian optimization",
+          "LLM & agentic systems",
+          "LLM evaluation & benchmarking",
+          "AI-assisted coding",
+          "Anthropic SDK"
+        ]
+      },
+      {
+        "label": "Data & Viz",
+        "items": [
+          "pandas / Polars / DuckDB",
+          "cloud data warehousing (Athena)",
+          "Altair",
+          "ggplot2",
+          "dashboards (Dash)",
+          "Quarto"
+        ]
+      },
+      {
+        "label": "Cloud & MLOps",
+        "items": [
+          "AWS (EC2, S3, Lambda, Batch, Fargate)",
+          "event-driven pipelines",
+          "Docker",
+          "CI/CD (GitHub Actions)",
+          "Linux"
         ]
       }
     ]
