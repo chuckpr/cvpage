@@ -70,7 +70,6 @@
   {
     "key": "tech",
     "permalink": "/tech/",
-    "teachingFirst": true,
     "profile": {
       "title": "Data Scientist<br>&amp; Machine Learning Engineer",
       "description": "Data scientist and machine learning engineer who builds data systems end to end: pipelines, LLM and agentic systems, predictive models, and the statistical analysis behind them. Teaches statistical inference and data science at UNC-Chapel Hill."
