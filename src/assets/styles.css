@@ -43,15 +43,19 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Type sizes ------------------------------------------------------------ */
-  --name-size: 22px;              /* your name in the header */
-  --title-size: 16px;             /* role title beside your name */
-  --summary-size: 14px;           /* intro paragraph */
-  --location-size: 12px;        /* the line under your name */
-  --section-heading-size: 12px;   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
-  --org-size: 14px;               /* employer / school names */
-  --role-title-size: 12px;        /* job titles, locations, date ranges */
-  --body-size: 11px;              /* bullet text */
-  --skills-size: 12px;          /* skills list */
+  /* --fs scales every size below uniformly. Default 1; a variant with room to
+     spare can set a larger --fs (via variant.fontScale, applied inline on the
+     sheet) to fill the page with more legible text without touching layout. */
+  --fs: 1;
+  --name-size: calc(22px * var(--fs));              /* your name in the header */
+  --title-size: calc(16px * var(--fs));             /* role title beside your name */
+  --summary-size: calc(14px * var(--fs));           /* intro paragraph */
+  --location-size: calc(12px * var(--fs));        /* the line under your name */
+  --section-heading-size: calc(12px * var(--fs));   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
+  --org-size: calc(14px * var(--fs));               /* employer / school names */
+  --role-title-size: calc(12px * var(--fs));        /* job titles, locations, date ranges */
+  --body-size: calc(11px * var(--fs));              /* bullet text */
+  --skills-size: calc(12px * var(--fs));          /* skills list */
 
   /* Spacing --------------------------------------------------------------- */
   --section-gap: 10px;            /* space between major sections */

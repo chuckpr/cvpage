@@ -10,7 +10,7 @@ permalink: "{{ variant.permalink }}"
 {% set pubs = publications | pick(variant.publications) %}
 {% set talks = talks | pick(variant.talks) %}
 
-<div class="sheet-outer letter">
+<div class="sheet-outer letter"{% if variant.fontScale %} style="--fs: {{ variant.fontScale }}"{% endif %}>
 <div class="pdf-download-row">
   <a href="{{ ('/resume-' + variant.key + '.pdf') | url }}" class="pdf-download">Download PDF</a>
 </div>
