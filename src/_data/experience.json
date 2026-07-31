@@ -99,7 +99,12 @@
         "children": [
           "Data Science Basics (BIOS-512). grew from 11 students to 50+ with a full waitlist",
           "Statistical inference and modeling (DATA-730)",
-          "AI/ML and statistical analysis of 'omics data, including RNA-Seq (DATA-791)"
+          {
+            "text": "AI/ML and statistical analysis of 'omics data, including RNA-Seq (DATA-791)",
+            "variants": {
+              "tech": "Statistical analysis and AI/ML for biotech and healthcare applications (DATA-791)"
+            }
+          }
         ]
       }
     }
