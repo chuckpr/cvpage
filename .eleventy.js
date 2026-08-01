@@ -41,6 +41,14 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Sort talks/publications by `year` (descending). A stable sort preserves the
+  // authored order among same-year entries. Copies first so the source is not
+  // mutated across paginated variants.
+  eleventyConfig.addFilter("sortByYearDesc", function(array) {
+    if (!Array.isArray(array)) return array;
+    return array.slice().sort((a, b) => (b.year || 0) - (a.year || 0));
+  });
+
   // Keep only the jobs a variant selected: a job renders iff its `id` is a key
   // in the variant's `select` map. Omitting an id hides that whole job.
   eleventyConfig.addFilter("selected", function(items, select) {

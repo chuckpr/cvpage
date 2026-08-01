@@ -8,7 +8,7 @@ permalink: "{{ variant.permalink }}"
 ---
 
 {% set pubs = publications | pick(variant.publications) %}
-{% set talks = talks | pick(variant.talks) %}
+{% set talks = talks | pick(variant.talks) | sortByYearDesc %}
 
 <div class="sheet-outer letter"{% if variant.fontScale %} style="--fs: {{ variant.fontScale }}"{% endif %}>
 <div class="pdf-download-row">

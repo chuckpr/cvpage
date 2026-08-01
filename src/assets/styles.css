@@ -43,19 +43,25 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Type sizes ------------------------------------------------------------ */
-  /* --fs scales every size below uniformly. Default 1; a variant with room to
-     spare can set a larger --fs (via variant.fontScale, applied inline on the
-     sheet) to fill the page with more legible text without touching layout. */
+  /* Base (unscaled) sizes. The scaled --*-size custom properties are derived
+     from these on .sheet-outer (see below) so the --fs multiplier resolves on
+     the element that actually carries it. Defining the calc() here in :root
+     would bake in --fs: 1, since var() substitutes at declaration scope. */
+  --name-size-base: 22px;              /* your name in the header */
+  --title-size-base: 16px;             /* role title beside your name */
+  --summary-size-base: 14px;           /* intro paragraph */
+  --location-size-base: 12px;          /* the line under your name */
+  --section-heading-size-base: 12px;   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
+  --org-size-base: 14px;               /* employer / school names */
+  --role-title-size-base: 12px;        /* job titles, locations, date ranges */
+  --body-size-base: 11px;              /* bullet text */
+  --skills-size-base: 12px;            /* skills list */
+
+  /* --fs scales every size above uniformly. Default 1; a variant with room to
+     spare sets a larger --fs (via variant.fontScale, applied inline on
+     .sheet-outer) to fill the page with more legible text without touching
+     layout. The scaled values are computed on .sheet-outer, not here. */
   --fs: 1;
-  --name-size: calc(22px * var(--fs));              /* your name in the header */
-  --title-size: calc(16px * var(--fs));             /* role title beside your name */
-  --summary-size: calc(14px * var(--fs));           /* intro paragraph */
-  --location-size: calc(12px * var(--fs));        /* the line under your name */
-  --section-heading-size: calc(12px * var(--fs));   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
-  --org-size: calc(14px * var(--fs));               /* employer / school names */
-  --role-title-size: calc(12px * var(--fs));        /* job titles, locations, date ranges */
-  --body-size: calc(11px * var(--fs));              /* bullet text */
-  --skills-size: calc(12px * var(--fs));          /* skills list */
 
   /* Spacing --------------------------------------------------------------- */
   --section-gap: 10px;            /* space between major sections */
@@ -118,7 +124,20 @@ a  { color: inherit; text-decoration: none; }
    can be distributed to fill it. Page insets come from @page margins in print
    and from padding on screen.
    ========================================================================== */
-.sheet-outer { margin: 0; }
+.sheet-outer {
+  margin: 0;
+  /* Derive the scaled type sizes here, where a variant's inline --fs is in
+     scope (var() substitutes against this element's --fs, not :root's). */
+  --name-size: calc(var(--name-size-base) * var(--fs));
+  --title-size: calc(var(--title-size-base) * var(--fs));
+  --summary-size: calc(var(--summary-size-base) * var(--fs));
+  --location-size: calc(var(--location-size-base) * var(--fs));
+  --section-heading-size: calc(var(--section-heading-size-base) * var(--fs));
+  --org-size: calc(var(--org-size-base) * var(--fs));
+  --role-title-size: calc(var(--role-title-size-base) * var(--fs));
+  --body-size: calc(var(--body-size-base) * var(--fs));
+  --skills-size: calc(var(--skills-size-base) * var(--fs));
+}
 
 .sheet {
   margin: 0;
@@ -409,11 +428,24 @@ a  { color: inherit; text-decoration: none; }
 
 
 /* ==========================================================================
-   PUBLICATIONS
+   PUBLICATIONS & TALKS — plain hanging-indent reference list (no timeline)
    ========================================================================== */
-.pub-entry {
-  font-size: 11px;
+.ref-list {
+  margin-left: 5px;
+}
+
+.ref-entry {
+  font-size: var(--body-size);
   line-height: 1.35;
+  margin: 0 0 6px;
+  /* Hanging indent: wrapped lines align under the first line's text, giving a
+     clean bibliographic look without bullets or a timeline rule. */
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.ref-entry:last-child {
+  margin-bottom: 0;
 }
 
 .pub-venue {
@@ -422,6 +454,10 @@ a  { color: inherit; text-decoration: none; }
 
 .pub-note {
   font-weight: 700;
+}
+
+.talk-title {
+  font-weight: 600;
 }
 
 
@@ -529,7 +565,7 @@ a  { color: inherit; text-decoration: none; }
 
   /* Keep entries and headings from splitting awkwardly across page breaks. */
   .timeline-item,
-  .pub-item {
+  .ref-entry {
     break-inside: avoid;
   }
 

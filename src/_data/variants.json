@@ -2,6 +2,8 @@
   {
     "key": "compbio",
     "permalink": "/",
+    "educationSecondPage": true,
+    "fontScale": 1.05,
     "publications": ["epulopiscium-2023", "cellulose-economy-2021", "sweetpotato-2020", "dnasip-2016", "biocrust-2015", "biofilm-carbon-2015", "yellowstone-2012"],
     "talks": ["aiche-2017", "cbgp-madrid-2018", "agbiotech-2016", "ecofab-2016", "agu-2015", "astrobio-2012"],
     "profile": {
@@ -9,8 +11,8 @@
       "description": "Full-stack genomics data scientist who builds data systems end to end: data pipelines, front-end data products, machine learning, and statistical analysis."
     },
     "select": {
-      "elevatebio": ["eb-active-learning", "eb-evo2-classifier", "eb-catalog"],
-      "agbiome": ["ab-platform", "ab-genome-api"],
+      "elevatebio": ["eb-active-learning", "eb-evo2-classifier", "eb-catalog", "eb-agentic"],
+      "agbiome": ["ab-platform", "ab-genome-api", "ab-blog"],
       "teaching-unc": ["teach-courses"],
       "cornell": ["cornell-sip"],
       "teaching-mbl": ["mbl-teaching"]
