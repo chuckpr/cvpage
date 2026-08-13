@@ -27,7 +27,7 @@
       },
       "eb-catalog": {
         "variants": {
-          "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across three editing modalities and contributing 300k+ distinct training examples for generative-model fine-tuning; these became key pillars of the company's technology portfolio.",
+          "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across four editing modalities (nuclease, base editing, prime editing, recombinases) and contributing 300k+ distinct training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio.",
           "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs."
         }
       },
@@ -41,7 +41,10 @@
         "text": "Set up (using IaC) and deployed a cloud-based system that lets lab scientists with little coding experience use Claude Code for their own data analysis, enforcing constraints on sensitive data, internal networking, and model endpoint access."
       },
       "eb-cloud-hpc": {
-        "text": "Built a cloud-based HPC system that runs and elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines without managing clusters."
+        "variants": {
+          "compbio": "Built a cloud-based HPC system that runs and elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines without managing clusters.",
+          "tech": "Built the cloud system that puts on-demand GPU inference in protein engineers' hands — running models like ESM2 and protein structure prediction — elastically scaling GPU and CPU compute so scientists get results without managing clusters."
+        }
       },
       "eb-benchmarking": {
         "text": "Developed the company's ML benchmarking and active-learning software."
@@ -97,7 +100,7 @@
       "teach-courses": {
         "text": "Develop and teach three courses in the Gillings School of Public Health and the School of Data and Information Sciences:",
         "children": [
-          "Data Science Basics (BIOS-512). grew from 11 students to 50+ with a full waitlist",
+          "Data Science Basics (BIOS-512), grew from 11 students to 50+ annually with a full waitlist",
           "Statistical inference and modeling (DATA-730)",
           {
             "text": "AI/ML and statistical analysis of 'omics data and health informatics (DATA-791)",
