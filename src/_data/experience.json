@@ -10,13 +10,15 @@
       "eb-active-learning": {
         "variants": {
           "compbio": "Led the supervised-learning strategy for protein optimization: protein-language-model embeddings with supervised fitness heads, plus active learning and Bayesian optimization to select each design-build-test round's variant library, surfacing variants with up to a 1.5X increase in activity.",
-          "tech": "Led the modeling behind our protein-design program: represented each candidate protein with embeddings from a pretrained protein language model, trained models on those to predict how well each would perform, and used the predictions to choose which few to test each round given limited experimental resources. Improved activity by up to 1.5x in the best designs."
+          "tech": "Led the modeling behind our protein-design program: represented each candidate protein with embeddings from a pretrained protein language model, trained models on those to predict how well each would perform, and used the predictions to choose which few to test each round given limited experimental resources. Improved activity by up to 1.5x in the best designs.",
+          "llm-product": "Led modeling and experimental design for our protein-design program: language-model embeddings, supervised models to predict performance, and active learning to choose which few candidates to test each round under a fixed budget. Improved activity by up to 1.5x."
         }
       },
       "eb-evo2-classifier": {
         "variants": {
           "compbio": "Built the training dataset for and trained an XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position at single-nucleotide resolution with >90% accuracy, more than doubling (>2X) the MGE training examples available for downstream generative applications.",
-          "tech": "Built and labeled the training data and trained an XGBoost classifier on nucleotide embeddings from Evo2 (a genomic language model), sorting genomic sequence into categories at over 90% accuracy and more than doubling how much of our data we could annotate automatically."
+          "tech": "Built and labeled the training data and trained an XGBoost classifier on nucleotide embeddings from Evo2 (a genomic language model), sorting genomic sequence into categories at over 90% accuracy and more than doubling how much of our data we could annotate automatically.",
+          "llm-product": "Built and labeled training data and trained an XGBoost classifier on foundation-model (Evo2) embeddings: over 90% accuracy, more than doubling the data we could annotate automatically."
         }
       },
       "eb-ngs": {
@@ -28,17 +30,22 @@
       "eb-catalog": {
         "variants": {
           "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across four editing modalities (nuclease, base editing, prime editing, recombinases) and contributing 300k+ distinct training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio.",
-          "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs."
+          "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs.",
+          "llm-product": "Led development of a searchable catalog (database, similarity search, and API) over large-scale sequence data; core infrastructure behind the company's discovery programs."
         }
       },
       "eb-agentic": {
         "variants": {
           "compbio": "Built a self-improving agentic system (Anthropic SDK on AWS Bedrock) that ingests and reformats experimental data submissions across three partnered program campaigns, validating output against a schema and feeding successes into a few-shot example bank.",
-          "tech": "Built a data processing agent (Anthropic SDK) that turns messy, inconsistent data submissions into clean, standardized records and checks its own output against the expected format. It learns from past successes to keep improving, and now runs across three program pipelines."
+          "tech": "Built a data processing agent (Anthropic SDK) that turns messy, inconsistent data submissions into clean, standardized records and checks its own output against the expected format. It learns from past successes to keep improving, and now runs across three program pipelines.",
+          "llm-product": "Built a self-improving, retrieval-augmented agent with the Anthropic SDK that turns messy, inconsistent data submissions into schema-validated records. Each run retrieves relevant past successes as few-shot context (RAG), so accuracy improves with use; in production across three program pipelines."
         }
       },
       "eb-claude-code-enablement": {
-        "text": "Set up (using IaC) and deployed a cloud-based system that lets lab scientists with little coding experience use Claude Code for their own data analysis, enforcing constraints on sensitive data, internal networking, and model endpoint access."
+        "text": "Set up (using IaC) and deployed a cloud-based system that lets lab scientists with little coding experience use Claude Code for their own data analysis, enforcing constraints on sensitive data, internal networking, and model endpoint access.",
+        "variants": {
+          "llm-product": "Built and deployed (via IaC) a cloud system that lets scientists with little coding experience use Claude Code for their own analysis, with guardrails on sensitive data, networking, and model access."
+        }
       },
       "eb-cloud-hpc": {
         "variants": {
@@ -47,7 +54,10 @@
         }
       },
       "eb-benchmarking": {
-        "text": "Developed the company's ML benchmarking and active-learning software."
+        "text": "Developed the company's ML benchmarking and active-learning software.",
+        "variants": {
+          "llm-product": "Built the team's ML benchmarking framework (shared evaluation sets, metrics, and reports) used to compare models and decide which approaches to adopt."
+        }
       }
     }
   },
@@ -68,7 +78,8 @@
       "ab-genome-api": {
         "variants": {
           "compbio": "Developed AgBiome's internal genome comparison API: a REST service on AWS Lambda and API Gateway for rapid MinHash-based genome search, pairwise comparison, and clustering by similarity.",
-          "tech": "Built an internal similarity-search REST API (AWS Lambda and API Gateway) using MinHash sketching for fast approximate matching, pairwise comparison, and similarity clustering over large record sets."
+          "tech": "Built an internal similarity-search REST API (AWS Lambda and API Gateway) using MinHash sketching for fast approximate matching, pairwise comparison, and similarity clustering over large record sets.",
+          "llm-product": "Built an internal similarity-search REST API (AWS Lambda and API Gateway) using MinHash sketching for fast approximate matching, ranking by similarity, and clustering over large record sets."
         }
       },
       "ab-publication": {
@@ -84,7 +95,10 @@
         }
       },
       "ab-blog": {
-        "text": "Started and ran an internal data science blog and wrote for it regularly, sharing analyses and results in plain language across the company."
+        "text": "Started and ran an internal data science blog and wrote for it regularly, sharing analyses and results in plain language across the company.",
+        "variants": {
+          "llm-product": "Started and ran an internal data science blog, sharing analyses and results in plain language across the company."
+        }
       }
     }
   },
@@ -105,7 +119,8 @@
           {
             "text": "AI/ML and statistical analysis of 'omics data and health informatics (DATA-791)",
             "variants": {
-              "tech": "Statistical analysis and AI/ML for biotech and healthcare applications (DATA-791)"
+              "tech": "Statistical analysis and AI/ML for biotech and healthcare applications (DATA-791)",
+              "llm-product": "Statistical analysis and AI/ML for biotech and healthcare: ML model evaluation, LLM embeddings (DATA-791)"
             }
           }
         ]
