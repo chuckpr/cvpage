@@ -22,10 +22,10 @@
         <div class="note-body">
           <ul class="note-list">
             {% for note in notes %}
-              <li>{{ note | noteText(variant.textVariant) }}
+              <li>{{ note | noteText(variant.textVariant, variant.textFallback) }}
                 {% if note.children and note.children.length %}
                   <ul class="note-sublist">
-                    {% for child in note.children %}<li>{{ child | noteText(variant.textVariant) }}</li>{% endfor %}
+                    {% for child in note.children %}<li>{{ child | noteText(variant.textVariant, variant.textFallback) }}</li>{% endfor %}
                   </ul>
                 {% endif %}
               </li>

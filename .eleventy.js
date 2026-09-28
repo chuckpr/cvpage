@@ -70,11 +70,13 @@ module.exports = function(eleventyConfig) {
     return items.filter((i) => (i && i.section ? i.section : "experience") === name);
   });
 
-  // Resolve a note's text for a variant (a plain string stays a string)
-  eleventyConfig.addFilter("noteText", function(note, variantKey) {
-    return (note && typeof note === "object")
-      ? ((note.variants && note.variants[variantKey]) || note.text)
-      : note;
+  // Resolve a note's text for a variant (a plain string stays a string).
+  // Tries the variant's own phrasing, then an optional fallback phrasing key
+  // (a tailored variant's base), then the plain `text`.
+  eleventyConfig.addFilter("noteText", function(note, variantKey, fallbackKey) {
+    if (!note || typeof note !== "object") return note;
+    const v = note.variants || {};
+    return v[variantKey] || (fallbackKey && v[fallbackKey]) || note.text;
   });
 
   // Development server options

@@ -41,9 +41,11 @@ const resolved = tailored.map((t) => {
     publications: t.publications ?? b.publications,
     permalink: `/tailored/${t.key}/`,
     // Reuse the base variant's phrasing unless the tailored variant supplies its
-    // own textVariant — a bullet with no matching phrasing falls back to its
-    // base/text wording (see the noteText filter), so partial overrides are fine.
+    // own textVariant — a bullet with no phrasing under that key falls back to
+    // the base variant's phrasing, then to its plain `text` (see the noteText
+    // filter), so partial overrides are fine.
     textVariant: t.textVariant || b.textVariant,
+    textFallback: b.textVariant,
   };
 });
 
