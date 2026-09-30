@@ -6,7 +6,8 @@
     "build": "eleventy",
     "serve": "eleventy --serve",
     "pdf": "npm run build && node scripts/generate-pdfs.js",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "backup": "scripts/backup-tailored.sh"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
