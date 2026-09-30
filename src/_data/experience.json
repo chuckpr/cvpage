@@ -120,7 +120,8 @@
             "text": "AI/ML and statistical analysis of 'omics data and health informatics (DATA-791)",
             "variants": {
               "tech": "Statistical analysis and AI/ML for biotech and healthcare applications (DATA-791)",
-              "llm-product": "Statistical analysis and AI/ML for biotech and healthcare: ML model evaluation, LLM embeddings (DATA-791)"
+              "llm-product": "Statistical analysis and AI/ML for biotech and healthcare: ML model evaluation, LLM embeddings (DATA-791)",
+              "helix": "NGS/AI/ML and statistical analysis of 'omics data and health informatics (DATA-791)"
             }
           }
         ]
