@@ -19,7 +19,8 @@
           "compbio": "Built the training dataset for and trained an XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position at single-nucleotide resolution with >90% accuracy, more than doubling (>2X) the MGE training examples available for downstream generative applications.",
           "tech": "Built and labeled the training data and trained an XGBoost classifier on nucleotide embeddings from Evo2 (a genomic language model), sorting genomic sequence into categories at over 90% accuracy and more than doubling how much of our data we could annotate automatically.",
           "llm-product": "Built and labeled training data and trained an XGBoost classifier on foundation-model (Evo2) embeddings: over 90% accuracy, more than doubling the data we could annotate automatically.",
-          "protein-design": "Trained an XGBoost classifier on Evo2 genomic language model embeddings to resolve mobile-genetic-element vs. host at single-nucleotide resolution with >90% accuracy, more than doubling the training examples available for downstream generative models."
+          "protein-design": "Trained an XGBoost classifier on Evo2 genomic language model embeddings to resolve mobile-genetic-element vs. host at single-nucleotide resolution with >90% accuracy, more than doubling the training examples available for downstream generative models.",
+          "genomics-ai": "Trained an XGBoost classifier on Evo2 DNA language model embeddings, resolving mobile-genetic-element vs. host at single-nucleotide resolution with >90% accuracy and more than doubling the training examples available for downstream generative models."
         }
       },
       "eb-ngs": {
@@ -34,14 +35,16 @@
           "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across four editing modalities (nuclease, base editing, prime editing, recombinases) and contributing 300k+ distinct training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio.",
           "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs.",
           "llm-product": "Led development of a searchable catalog (database, similarity search, and API) over large-scale sequence data; core infrastructure behind the company's discovery programs.",
-          "protein-design": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic data to deliver active gene-editing effectors across four modalities and 300k+ training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio."
+          "protein-design": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic data to deliver active gene-editing effectors across four modalities and 300k+ training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio.",
+          "genomics-ai": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic data to deliver active gene-editing effectors across four modalities and 300k+ training examples for generative-model fine-tuning."
         }
       },
       "eb-agentic": {
         "variants": {
           "compbio": "Built a self-improving agentic system (Anthropic SDK on AWS Bedrock) that ingests and reformats experimental data submissions across three partnered program campaigns, validating output against a schema and feeding successes into a few-shot example bank.",
           "tech": "Built a data processing agent (Anthropic SDK) that turns messy, inconsistent data submissions into clean, standardized records and checks its own output against the expected format. It learns from past successes to keep improving, and now runs across three program pipelines.",
-          "llm-product": "Built a self-improving, retrieval-augmented agent with the Anthropic SDK that turns messy, inconsistent data submissions into schema-validated records. Each run retrieves relevant past successes as few-shot context (RAG), so accuracy improves with use; in production across three program pipelines."
+          "llm-product": "Built a self-improving, retrieval-augmented agent with the Anthropic SDK that turns messy, inconsistent data submissions into schema-validated records. Each run retrieves relevant past successes as few-shot context (RAG), so accuracy improves with use; in production across three program pipelines.",
+          "genomics-ai": "Built a self-improving agentic system (Anthropic SDK on AWS Bedrock) that ingests and normalizes experimental data submissions across three program campaigns, validating output against a schema."
         }
       },
       "eb-claude-code-enablement": {
@@ -54,7 +57,8 @@
         "variants": {
           "compbio": "Built a cloud-based HPC system that runs and elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines without managing clusters.",
           "tech": "Built the cloud system that puts on-demand GPU inference in protein engineers' hands — running models like ESM2 and protein structure prediction — elastically scaling GPU and CPU compute so scientists get results without managing clusters.",
-          "protein-design": "Built a cloud HPC system that elastically scales GPU and CPU workloads, giving research teams on-demand compute for model training, structure prediction, and large sequence-analysis pipelines."
+          "protein-design": "Built a cloud HPC system that elastically scales GPU and CPU workloads, giving research teams on-demand compute for model training, structure prediction, and large sequence-analysis pipelines.",
+          "genomics-ai": "Built a cloud HPC system that elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines."
         }
       },
       "eb-benchmarking": {
@@ -76,7 +80,8 @@
       "ab-platform": {
         "variants": {
           "compbio": "Designed and led AgBiome's AWS genomics data platform: an event-driven system of dozens of pipelines (from k-mer sketching to biosynthetic gene cluster annotation) processing 20,000+ isolated and sequenced microorganisms annually into a queryable database that informed R&D.",
-          "tech": "Designed and led the data platform that processed more than 20,000 new datasets a year through dozens of automated pipelines into a database our R&D teams could query directly."
+          "tech": "Designed and led the data platform that processed more than 20,000 new datasets a year through dozens of automated pipelines into a database our R&D teams could query directly.",
+          "genomics-ai": "Designed and led AgBiome's AWS genomics data platform: an event-driven system of dozens of pipelines (k-mer sketching through biosynthetic gene cluster annotation) processing 20,000+ sequenced microorganisms annually into a queryable database that informed crop-protection R&D."
         }
       },
       "ab-genome-api": {
@@ -89,7 +94,8 @@
       "ab-publication": {
         "variants": {
           "compbio": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional statistical analysis of 16S rRNA gene amplicon surveys resolving sweetpotato microbiome community assembly.",
-          "tech": "First author on a peer-reviewed study applying statistical analysis to a large survey dataset; selected as an Editor's Pick by the journal."
+          "tech": "First author on a peer-reviewed study applying statistical analysis to a large survey dataset; selected as an Editor's Pick by the journal.",
+          "genomics-ai": "First author on AgBiome's first peer-reviewed publication, an Editor's Pick in Phytobiomes Journal: multivariate and compositional analysis of 16S amplicon surveys resolving sweetpotato microbiome community assembly."
         }
       },
       "ab-infra": {
