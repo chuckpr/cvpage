@@ -18,20 +18,23 @@
         "variants": {
           "compbio": "Built the training dataset for and trained an XGBoost classifier on Evo2 genomic language model embeddings, resolving mobile-genetic-element vs. host by (meta)genomic contig position at single-nucleotide resolution with >90% accuracy, more than doubling (>2X) the MGE training examples available for downstream generative applications.",
           "tech": "Built and labeled the training data and trained an XGBoost classifier on nucleotide embeddings from Evo2 (a genomic language model), sorting genomic sequence into categories at over 90% accuracy and more than doubling how much of our data we could annotate automatically.",
-          "llm-product": "Built and labeled training data and trained an XGBoost classifier on foundation-model (Evo2) embeddings: over 90% accuracy, more than doubling the data we could annotate automatically."
+          "llm-product": "Built and labeled training data and trained an XGBoost classifier on foundation-model (Evo2) embeddings: over 90% accuracy, more than doubling the data we could annotate automatically.",
+          "protein-design": "Trained an XGBoost classifier on Evo2 genomic language model embeddings to resolve mobile-genetic-element vs. host at single-nucleotide resolution with >90% accuracy, more than doubling the training examples available for downstream generative models."
         }
       },
       "eb-ngs": {
         "variants": {
           "compbio": "Built NGS pipelines (amplicon sequencing, unidirectional sequencing, GUIDE-Seq, DiGenome-Seq) to assess on- and off-target gene-editing outcomes, and statistically analyzed the results to quantify editing efficiency and specificity across therapeutic programs.",
-          "tech": "Built the analysis pipelines that turn raw sequencing data into quantified, statistically characterized results, spanning genome-wide off-target detection, targeted allele counting, and whole-genome assays."
+          "tech": "Built the analysis pipelines that turn raw sequencing data into quantified, statistically characterized results, spanning genome-wide off-target detection, targeted allele counting, and whole-genome assays.",
+          "protein-design": "Built NGS pipelines (amplicon, GUIDE-Seq, DiGenome-Seq) and the statistics that quantify on- and off-target editing outcomes across therapeutic programs."
         }
       },
       "eb-catalog": {
         "variants": {
           "compbio": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic sequence data to deliver active gene-editing effectors across four editing modalities (nuclease, base editing, prime editing, recombinases) and contributing 300k+ distinct training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio.",
           "tech": "Led development of a searchable catalog (database, search, and API) that became core infrastructure behind the company's discovery programs.",
-          "llm-product": "Led development of a searchable catalog (database, similarity search, and API) over large-scale sequence data; core infrastructure behind the company's discovery programs."
+          "llm-product": "Led development of a searchable catalog (database, similarity search, and API) over large-scale sequence data; core infrastructure behind the company's discovery programs.",
+          "protein-design": "Led development of ElevateBio's protein catalog for therapeutic discovery, mining large-scale metagenomic data to deliver active gene-editing effectors across four modalities and 300k+ training examples for generative-model fine-tuning; these effectors became key pillars of the company's technology portfolio."
         }
       },
       "eb-agentic": {
@@ -50,7 +53,8 @@
       "eb-cloud-hpc": {
         "variants": {
           "compbio": "Built a cloud-based HPC system that runs and elastically scales GPU and CPU genomics workloads, giving research teams on-demand compute for model training and large sequence-analysis pipelines without managing clusters.",
-          "tech": "Built the cloud system that puts on-demand GPU inference in protein engineers' hands — running models like ESM2 and protein structure prediction — elastically scaling GPU and CPU compute so scientists get results without managing clusters."
+          "tech": "Built the cloud system that puts on-demand GPU inference in protein engineers' hands — running models like ESM2 and protein structure prediction — elastically scaling GPU and CPU compute so scientists get results without managing clusters.",
+          "protein-design": "Built a cloud HPC system that elastically scales GPU and CPU workloads, giving research teams on-demand compute for model training, structure prediction, and large sequence-analysis pipelines."
         }
       },
       "eb-benchmarking": {
