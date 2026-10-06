@@ -3,6 +3,7 @@
     "key": "compbio",
     "permalink": "/",
     "educationSecondPage": true,
+    "titles": { "elevatebio": "Senior Data Scientist ('21–'23) | Assoc. Dir., Protein Discovery ('23–'26)" },
     "fontScale": 1.05,
     "publications": ["epulopiscium-2023", "cellulose-economy-2021", "sweetpotato-2020", "dnasip-2016", "biocrust-2015", "biofilm-carbon-2015", "yellowstone-2012"],
     "talks": ["aiche-2017", "cbgp-madrid-2018", "agbiotech-2016", "ecofab-2016", "agu-2015", "astrobio-2012"],
