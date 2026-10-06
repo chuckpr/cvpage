@@ -4,7 +4,7 @@
     {%- for cluster in variant.skillClusters %}
     <div class="skill-cluster">
       <span class="skill-cluster-label">{{ cluster.label }}</span>
-      <span class="skill-cluster-items">{% for it in cluster.items %}<span class="skill">{{ it }}</span>{{ " · " if not loop.last }}{% endfor %}</span>
+      <span class="skill-cluster-items">{% for it in cluster.items %}<span class="skill">{{ it }}{{ " ·" if not loop.last }}</span>{{ " " if not loop.last }}{% endfor %}</span>
     </div>
     {%- endfor %}
   </div>
