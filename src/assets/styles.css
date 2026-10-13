@@ -162,7 +162,8 @@
   --location-size-base: 12px;          /* the line under your name */
   --section-heading-size-base: 12px;   /* "EXPERIENCE", "SKILLS", "EDUCATION" ... */
   --org-size-base: 14px;               /* employer / school names */
-  --role-title-size-base: 12px;        /* job titles, locations, date ranges */
+  --role-title-size-base: 12px;        /* locations, date ranges */
+  --job-title-size-base: 11px;         /* job titles (a touch under the location/date size) */
   --body-size-base: 11px;              /* bullet text */
   --skills-size-base: 12px;            /* skills list */
 
@@ -244,6 +245,7 @@ a  { color: inherit; text-decoration: none; }
   --section-heading-size: calc(var(--section-heading-size-base) * var(--fs));
   --org-size: calc(var(--org-size-base) * var(--fs));
   --role-title-size: calc(var(--role-title-size-base) * var(--fs));
+  --job-title-size: calc(var(--job-title-size-base) * var(--fs));
   --body-size: calc(var(--body-size-base) * var(--fs));
   --skills-size: calc(var(--skills-size-base) * var(--fs));
 }
@@ -452,12 +454,13 @@ a  { color: inherit; text-decoration: none; }
 
 .role-title {
   margin: 0;
-  padding-left: 12px;
-  font-size: var(--role-title-size);
+  padding-left: 0;
+  font-size: var(--job-title-size);
   font-weight: 800;
 }
 
 .role-location {
+  margin-left: 8px;
   font-size: var(--role-title-size);
   font-style: italic;
   white-space: nowrap;

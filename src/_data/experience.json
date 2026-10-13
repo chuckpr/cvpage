@@ -27,7 +27,8 @@
         "variants": {
           "compbio": "Built NGS pipelines (amplicon sequencing, unidirectional sequencing, GUIDE-Seq, DiGenome-Seq) to assess on- and off-target gene-editing outcomes, and statistically analyzed the results to quantify editing efficiency and specificity across therapeutic programs.",
           "tech": "Built the analysis pipelines that turn raw sequencing data into quantified, statistically characterized results, spanning genome-wide off-target detection, targeted allele counting, and whole-genome assays.",
-          "protein-design": "Built NGS pipelines (amplicon, GUIDE-Seq, DiGenome-Seq) and the statistics that quantify on- and off-target editing outcomes across therapeutic programs."
+          "protein-design": "Built NGS pipelines (amplicon, GUIDE-Seq, DiGenome-Seq) and the statistics that quantify on- and off-target editing outcomes across therapeutic programs.",
+          "natera": "Built NGS pipelines (amplicon sequencing, unidirectional sequencing, GUIDE-Seq, DiGenome-Seq) to assess on- and off-target outcomes of gene editing and epigenetic editing, and statistically analyzed the results to quantify editing efficiency and specificity across therapeutic programs."
         }
       },
       "eb-catalog": {
